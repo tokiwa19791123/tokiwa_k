@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="author" content="tokiwa kiyoshi">
+<link rel="stylesheet" href="./public/css/style.css">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script>
+<title>SAMPLE 03</title>
+</head>
+<body>
+<h1>画像エフェクト</h1>
+
+<h2>マウスホバーでズーム</h2>
+
+<h3>ズームイン</h3>
+<div class="_image _image_zoom_in">
+	<img src="http://placekitten.com/600/600">
+</div>
+
+<h3>ズームアウト</h3>
+<div class="_image _image_zoom_out">
+	<img src="http://placekitten.com/600/600">
+</div>
+
+<pre class="prettyprint lang-css linenums">
+._image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+._image img {
+  width: 300px;
+  height: 300px;
+  vertical-align: bottom;
+  transition: 0.3s;
+}
+._image_zoom_in:hover img {
+  transform: scale(2, 2);
+}
+
+._image_zoom_out img {
+  transform: scale(2, 2);
+}
+._image_zoom_out:hover img {
+  transform: scale(1, 1);
+}
+</pre>
+
+<h2>マウスホバーで回転</h2>
+
+<h3>右回転</h3>
+<div class="_image _image_rolling_right">
+	<img src="http://placekitten.com/300/300">
+</div>
+
+<h3>左回転</h3>
+<div class="_image _image_rolling_left">
+	<img src="http://placekitten.com/300/300">
+</div>
+
+<h3>縦回転</h3>
+<div class="_image _image_rolling_x">
+	<img src="http://placekitten.com/300/300">
+</div>
+
+<h3>横回転</h3>
+<div class="_image _image_rolling_y">
+	<img src="http://placekitten.com/300/300">
+</div>
+
+<pre class="prettyprint lang-css linenums">
+._image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+._image img {
+  width: 300px;
+  height: 300px;
+  vertical-align: bottom;
+  transition: 0.3s;
+}
+
+._image_rolling_right:hover img {
+  transform: rotate(360deg);
+}
+
+._image_rolling_left:hover img {
+  transform: rotate(-360deg);
+}
+
+._image_rolling_x:hover img {
+  transform: rotateX(180deg);
+}
+
+._image_rolling_y:hover img {
+  transform: rotateY(180deg);
+}
+</pre>
+
+<h2>マウスホバーで別画像に</h2>
+<div class="_image _image_change">
+	<img src="http://placekitten.com/500/500" class="_image _image_change_before">
+	<img src="http://placekitten.com/1000/1000" class="_image _image_change_after">
+</div>
+
+<pre class="prettyprint lang-css linenums">
+._image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+._image img {
+  width: 300px;
+  height: 300px;
+  vertical-align: bottom;
+  transition: 0.3s;
+}
+
+._image_change {
+  position: relative;
+}
+._image_change img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+._image_change ._image_change_before {
+  opacity: 1.0;
+}
+._image_change ._image_change_after {
+  opacity: 0.0;
+}
+._image_change:hover ._image_change_before {
+  opacity: 0.0;
+}
+._image_change:hover ._image_change_after {
+  opacity: 1.0;
+}
+</pre>
+
+
+
+
+</body>
+</html>

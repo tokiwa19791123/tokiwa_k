@@ -1,0 +1,48 @@
+/* ----- SAMPLE 04 ----- */
+
+._radio_text {
+	label {
+		cursor: pointer;
+		input[type="radio"] {
+			& + span {
+				transition: 0.3s;
+			}
+			&:checked {
+				@each $category in $categories {
+					$n: index($categories, $category);
+					$color: nth($colors, $n);
+					& + ._radio_text_#{$category} {
+						color: $color;
+					}
+				}
+			}
+		}
+	}
+}
+
+._radio_button {
+	label {
+		cursor: pointer;
+		input[type="radio"] {
+			display: none;
+			& + span {
+				display: inline-block;
+				padding: 10px 15px;
+				line-height: 1.0;
+				border-radius: 3px;
+				background: $gray2;
+				color: $white;
+				transition: 0.3s;
+			}
+			&:checked {
+				@each $category in $categories {
+					$n: index($categories, $category);
+					$color: nth($colors, $n);
+					& + ._radio_button_#{$category} {
+						background: $color;
+					}
+				}
+			}
+		}
+	}
+}

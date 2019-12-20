@@ -1,0 +1,41 @@
+/* ----- SAMPLE 10 ----- */
+
+._tab_wrapper {
+	input[type="radio"] {
+		display: none;
+	}
+	._tab_switch {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			display: inline-block;
+			label {
+				display: block;
+				padding: 5px 10px;
+				border-radius: 5px 5px 0 0;
+				background: $gray2;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+		}
+	}
+	._tab_box {
+		display: none;
+		padding: 10px;
+		border: 1px solid $gray2;
+	}
+}
+
+@for $i from 1 through 4 {
+	#tab#{$i}:checked {
+		& ~ ._tab_switch ._tab_switch#{$i} label {
+			padding: 5px 20px;
+			background: $blue3;
+			color: $white;
+		}
+		& ~ ._tab_box#{$i} {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="author" content="tokiwa kiyoshi">
+<link rel="stylesheet" href="./public/css/style.css">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script>
+<title>SAMPLE 20</title>
+</head>
+<body>
+
+<h2>モーダルウィンドウ</h2>
+
+<div class="_modalwindow">
+	<ul class="_modalwindow_thumbnails">
+		<li class="_modalwindow_thumbnail"><a href="#image1"><img src="http://placekitten.com/300/300"></a></li>
+		<li class="_modalwindow_thumbnail"><a href="#image2"><img src="http://placekitten.com/400/400"></a></li>
+		<li class="_modalwindow_thumbnail"><a href="#image3"><img src="http://placekitten.com/500/500"></a></li>
+		<li class="_modalwindow_thumbnail"><a href="#image4"><img src="http://placekitten.com/600/600"></a></li>
+		<li class="_modalwindow_thumbnail"><a href="#image5"><img src="http://placekitten.com/700/700"></a></li>
+		<li class="_modalwindow_thumbnail"><a href="#image6"><img src="http://placekitten.com/900/900"></a></li>
+	</ul>
+	<figure class="_modalwindow_image" id="image1"><a href="#reset"><img src="http://placekitten.com/300/300"></a></figure>
+	<figure class="_modalwindow_image" id="image2"><a href="#reset"><img src="http://placekitten.com/400/400"></a></figure>
+	<figure class="_modalwindow_image" id="image3"><a href="#reset"><img src="http://placekitten.com/500/500"></a></figure>
+	<figure class="_modalwindow_image" id="image4"><a href="#reset"><img src="http://placekitten.com/600/600"></a></figure>
+	<figure class="_modalwindow_image" id="image5"><a href="#reset"><img src="http://placekitten.com/700/700"></a></figure>
+	<figure class="_modalwindow_image" id="image6"><a href="#reset"><img src="http://placekitten.com/900/900"></a></figure>
+</div>
+
+
+
+
+<pre class="prettyprint lang-css linenums">
+._modalwindow img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom;
+}
+._modalwindow ._modalwindow_thumbnails {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+._modalwindow ._modalwindow_thumbnails ._modalwindow_thumbnail {
+  margin: 0 1px 1px 0;
+  width: 100px;
+}
+._modalwindow ._modalwindow_image {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  background: rgba(34, 34, 34, 0.5);
+}
+._modalwindow ._modalwindow_image:target {
+  display: block;
+}
+._modalwindow ._modalwindow_image a {
+  display: table-cell;
+  width: 100vw;
+  height: 100vh;
+  line-height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="author" content="tokiwa kiyoshi">
+<link rel="stylesheet" href="./public/css/style.css">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script>
+<title>SAMPLE 16</title>
+</head>
+<body>
+
+<h2>丸い画像に回り込むテキスト</h2>
+
+<div class="cf">
+
+<img src="http://placekitten.com/g/300/300" class="_shape _shape_right" width="200">
+<p>「吾輩は猫である」は雜誌ホトヽギスに連載した續き物である。固より纒つた話の筋を讀ませる普通の小説ではないから、どこで切つて一册としても興味の上に於て左したる影響のあらう筈がない。然し自分の考ではもう少し書いた上でと思つて居たが、書肆が頻りに催促をするのと、多忙で意の如く稿を續ぐ餘暇がないので［＃「ないので」は底本では「なので」］、差し當り是丈を出版する事にした。</p>
+
+
+
+<img src="http://placekitten.com/200/200" class="_shape _shape_left" width="200">
+
+<p>　自分が既に雜誌へ出したものを再び單行本の體裁として公にする以上は、之を公にする丈の價値があると云ふ意味に解釋されるかも知れぬ。「吾輩は猫である」が果してそれ丈の價値があるかないかは著者の分として言ふべき限りでないと思ふ。たゞ自分の書いたものが自分の思ふ樣な體裁で世の中へ出るのは、内容の價値如何に關らず、自分丈は嬉しい感じがする。自分に對しては此事實が出版を促がすに充分な動機である。（青空文庫より）</p>
+
+</div>
+
+
+
+<pre class="prettyprint lang-css linenums">
+._shape {
+  border-radius: 100%;
+  shape-outside: circle();
+}
+
+._shape_right {
+  float: right;
+  margin-left: 1.0em;
+}
+
+._shape_left {
+  float: left;
+  margin-right: 1.0em;
+}
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/*
+
+．〃∩ ∧＿∧
+　⊂⌒(　･ω･)   
+　　＼_っ⌒/⌒c _____ TOKIWA ORIGIN 2019.11.23 _____
+　　　　⌒ ⌒
+*/
+
+@import './__common/palet';
+@import './__common/mixin';
+//@import './__common/reset';
+//@import './__common/form';
+/* ----- BASIC ----- */
+
+//@import './1.basic/sample01';
+//@import './1.basic/sample02';
+//@import './1.basic/sample03';
+//@import './1.basic/sample04';
+//@import './1.basic/sample05';
+//@import './1.basic/sample06';
+//@import './1.basic/sample07';
+//@import './1.basic/sample08';
+//@import './1.basic/sample09';
+//@import './1.basic/sample10';
+//@import './1.basic/sample11';
+//@import './1.basic/sample12';
+//@import './1.basic/sample13';
+//@import './1.basic/sample14';
+//@import './1.basic/sample15';
+//@import './1.basic/sample16';
+//@import './1.basic/sample17';
+//@import './1.basic/sample18';
+//@import './1.basic/sample19';
+//@import './1.basic/sample20';
+//@import './1.basic/sample21';
+//@import './1.basic/sample22';
+//@import './1.basic/sample23';
+//@import './1.basic/sample24';
+@import './1.basic/sample25';
+/* ----- SMART PHONE ----- */
+
+@media screen and (max-width: 580px) {}
+
+
+
+
+/* HEAD */
+
+.prettyprint {
+	font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	font-size: 0.8em;
+	overflow-x: auto;
+	.linenums {
+		li {
+			list-style-position: outside;
+			list-style-type: decimal-leading-zero;
+			border-left: 1px dashed $gray3;
+		}
+	}
+}
+
+
+.backblack {
+	margin: 0;
+	padding: 10px;
+	background: $black;
+}
+
+.through {
+	color: $gray2;
+	text-decoration: line-through;
+}
+
+.cf {
+	@include cf;
+}
+
+/* fs */
+
+@for $i from 8 through 25 {
+	.fs#{$i * 10} {
+		font-size: #{$i * 0.1}em;
+	}
+	.fs#{$i * 10}b {
+		font-size: #{$i * 0.1}em;
+		font-weight: bold;
+	}
+}

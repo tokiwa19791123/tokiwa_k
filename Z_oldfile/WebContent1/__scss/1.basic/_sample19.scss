@@ -1,0 +1,39 @@
+/* ----- SAMPLE 19 ----- */
+
+._table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	width: 100%;
+	tr {
+		border-bottom: 1px solid;
+		th,
+		td {
+			padding: 5px;
+			border-right: 1px solid;
+		}
+	}
+}
+
+._table_fixed {
+	width: 100%;
+	white-space: nowrap;
+	overflow-x: scroll;
+	._table {
+		table-layout: fixed;
+		colgroup {
+			col {
+				width: 200px;
+				&._teams {
+					width: 100px;
+				}
+			}
+		}
+		tr {
+			th,
+			td {
+			}
+		}
+	}
+}

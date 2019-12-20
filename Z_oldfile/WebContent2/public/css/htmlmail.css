@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* ----- HTML MAIL TEMPLATE ----- */
+.hm_body {
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', 'メイリオ', Meiryo, sans-serif;
+}
+
+.hm_table {
+  width: 100%;
+  border-collapse: collapse;
+  mso-table-lspace: 0;
+  mso-table-rspace: 0;
+}
+
+.hm_wrapper_table {
+  max-width: 640px;
+  background: #fff;
+}
+
+.hm_td {
+  text-align: center;
+}
+
+.hm_td_text {
+  padding: 15px;
+  line-height: 120%;
+  font-size: 110%;
+}
+
+.tm_td_pink {
+  background: #fff5ee;
+}
+
+.hm_td_gray {
+  background: #f3f3f3;
+  font-weight: bold;
+}
+
+.hm_td_black {
+  background: #808080;
+  color: #ffffff;
+}
+
+.hm_td_title {
+  padding: 30px 0 0 0;
+}
+
+.hm_img {
+  margin: 0 0 10px 0;
+  outline: none;
+  border: none;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.hm_text {
+  margin: 0 0 15px 0;
+}
+
+.hm_text_min {
+  font-size: 80%;
+}
+
+.hm_text_last {
+  margin: 0;
+}
+
+.hm_inner_table {
+  max-width: 574px;
+}
+
+.hm_td_half {
+  max-width: 280px;
+  border: 1px solid #efefef;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.hm_td_border {
+  width: 10px;
+}
+
+.hm_tr_border {
+  height: 10px;
+}
+
+.hm_280 {
+  width: 280px;
+}
+
+.hm_name {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.hm_price {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 140%;
+  font-weight: bold;
+  color: #7f0c09;
+}

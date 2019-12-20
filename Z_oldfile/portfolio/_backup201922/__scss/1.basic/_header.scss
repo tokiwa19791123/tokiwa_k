@@ -1,0 +1,25 @@
+/* ----- HEADER ----- */
+
+header {
+	background: $green3;
+	overflow: hidden;
+	position: relative;
+	h1 {
+		left: 50%;
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		width: 100%;
+		span {
+			color: $white;
+			display: block;
+			font-family: serif;
+			font-size: 3.0em;
+			line-height: 1.4;
+		}
+		img {
+			border-radius: 100%;
+		}
+	}
+}

@@ -1,0 +1,86 @@
+/* ----- MAIN ----- */
+
+main {
+	padding-left: 0;
+	nav {}
+	.main-wrapper {
+		height: inherit;
+		overflow-y: inherit;
+		width: 100%;
+		article {}
+	}
+}
+
+/* ----- NAV ----- */
+
+nav {
+	width: 100%;
+	&.is_fixed {
+		left: 0;
+		position: fixed;
+		right: 0;
+		top: -40px;
+	}
+	ul {
+		@include flex;
+		li {
+			flex: 1;
+			a {
+				border-left: 1px dotted $green2;
+				border-radius: 0;
+				height: 40px;
+				line-height: 40px;
+				margin-top: 0;
+				padding: 0;
+				span {
+					font-weight: normal;
+					writing-mode: inherit;
+					@include el;
+				}
+				&::after {
+					display: none;
+				}
+				&:hover,
+				&.active {
+					border-left-color: $green2;
+					margin-left: 0;
+					width: inherit;
+				}
+			}
+			&:first-of-type a {
+				border-left: none;
+			}
+		}
+	}
+}
+
+/* ----- ARTICLE ----- */
+
+article {
+	font-size: 1.0em;
+	padding: 65px 15px 15px;
+	h2 {}
+	p,
+	ul,
+	ol,
+	dl,
+	table {
+		margin-top: 15px;
+		&:first-child {}
+	}
+	ul,
+	ol {
+		margin-left: 15px;
+	}
+	dl dt {}
+	table {
+		tr {
+			th {}
+			td {}
+		}
+	}
+}
+
+.card {
+	padding: 15px;
+}

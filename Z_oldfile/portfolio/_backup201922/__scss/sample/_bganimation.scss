@@ -1,0 +1,37 @@
+/* ----- BACKGROUND ANIMATION ----- */
+
+.bg-animation {
+	@include animation(bg-animation, 10s);
+
+}
+
+
+@include keyframes(bg-animation) {
+	0% {
+		@include gradation2($red1, $orange1);
+	}
+	12.5% {
+		@include gradation2($orange1, $yellow2);
+	}
+	25% {
+		@include gradation2($yellow2, $lime1);
+	}
+	37.5% {
+		@include gradation2($lime1, $green1);
+	}
+	50% {
+		@include gradation2($green1, $blue2);
+	}
+	42.5% {
+		@include gradation2($blue2, $purple1);
+	}
+	75% {
+		@include gradation2($purple1, $pink2);
+	}
+	87.5% {
+		@include gradation2($pink2, $red1);
+	}
+	100% {
+		@include gradation2($red1, $orange1);
+	}
+}

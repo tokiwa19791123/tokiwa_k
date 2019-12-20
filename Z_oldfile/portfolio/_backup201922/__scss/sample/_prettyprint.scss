@@ -1,0 +1,15 @@
+/* ----- CODE PRETTY ----- */
+
+.prettyprint {
+	font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	font-size: 0.8em;
+	overflow-x: auto;
+	.linenums {
+		li {
+			list-style-position: outside;
+			margin-left: 3.0em;
+			padding-left: 0.5em;
+			border-left: 1px dashed $gray3;
+		}
+	}
+}

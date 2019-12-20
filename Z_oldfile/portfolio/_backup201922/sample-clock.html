@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="author" content="tokiwa kiyoshi">
+<link rel="icon" type="image/x-icon" href="./public/img/icon/favicon.ico">
+<link rel="stylesheet" href="./public/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="./public/codeprettify/css/sons-of-obsidian.css">
+<link rel="stylesheet" href="./public/css/sample.css">
+<script src="./public/js/jquery-3.4.1.min.js"></script>
+<script src="./public/js/sample-clock.js" async></script>
+<title>SAMPLE ANALOG CLOCK</title>
+</head>
+<body>
+<div class="sample-wrapper">
+<div class="clock-wrapper">
+	<div class="clock-base">
+		<hr class="clock-second" id="second">
+		<hr class="clock-minutes" id="minutes">
+		<hr class="clock-hour" id="hour">
+	</div>
+</div>
+
+<h1>SAMPLE ANALOG CLOCK</h1>
+<p>html/css/jQuery(javaScript)だけで作ったアナログ時計</p>
+
+<h2>html</h2>
+<pre class="prettyprint linenums">
+&lt;div class="clock-wrapper"&gt;
+  &lt;div class="clock-base"&gt;
+    &lt;hr class="clock-second" id="second"&gt;
+    &lt;hr class="clock-minutes" id="minutes"&gt;
+    &lt;hr class="clock-hour" id="hour"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h2>css</h2>
+<pre class="prettyprint linenums lang-css">
+/* ----- ANALOG CLOCK ----- */
+.clock-wrapper {
+  height: 300px;
+  margin: 0 auto;
+  width: 300px;
+}
+.clock-wrapper .clock-base {
+  border: 4px solid #06c;
+  border-radius: 100%;
+  height: 300px;
+  position: relative;
+  width: 300px;
+}
+.clock-wrapper .clock-base::after {
+  background: #06c;
+  border-radius: 100%;
+  content: "";
+  height: 8px;
+  left: calc(50% - 4px);
+  position: absolute;
+  top: calc(50% - 4px);
+  width: 8px;
+}
+.clock-wrapper hr {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: rotateZ(-90deg);
+  transform-origin: 0% 0% 0;
+}
+.clock-wrapper hr.clock-second {
+  border-color: #fe7;
+  width: 142px;
+}
+.clock-wrapper hr.clock-minutes {
+  border-color: #393;
+  width: 126px;
+}
+.clock-wrapper hr.clock-hour {
+  border-color: #f60;
+  width: 110px;
+}
+</pre>
+
+<h2>jQuery</h2>
+<pre class="prettyprint linenums lang-js">
+$(function() {
+  $(document).ready(function() {
+    setInterval(function() {
+      var now = new Date();
+      angle(now.getHours(), 30, 'hour');
+      angle(now.getMinutes(), 6, 'minutes');
+      angle(now.getSeconds(), 6, 'second');
+    }, 1000);
+  });
+});
+
+function angle(n, d, id) {
+  var deg = ((n * d) - 90);
+  $('#' + id).css({
+    'transform' : 'rotateZ(' + deg + 'deg)'
+  });
+}
+</pre>
+</div>
+<script src="./public/codeprettify/js/prettify.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

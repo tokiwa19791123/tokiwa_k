@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@import './__common/reset';
+@import './__common/palet';
+@import './__common/mixin';
+@import './sample/prettyprint';
+
+.sample-wrapper {
+	padding: 20px;
+}
+
+*::before,
+*::after {
+	font-family: "Font Awesome 5 Free";
+}
+
+@import './sample/slot';
+@import './sample/clock';
+@import './sample/daruma';
+@import './sample/accordion';
+@import './sample/slider';
+@import './sample/bganimation';
+@import './sample/imageeffecter';

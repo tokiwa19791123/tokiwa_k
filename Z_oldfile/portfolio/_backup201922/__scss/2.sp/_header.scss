@@ -1,0 +1,19 @@
+/* ----- HEADER ----- */
+
+header {
+	h1 {
+		left: inherit;
+		position: static;
+		top: inherit;
+		transform: inherit;
+		span {
+			display: inline-block;
+			font-size: 1.5em;
+			line-height: 80px;
+		}
+		img {
+			border-radius: 100%;
+			width: 80px;
+		}
+	}
+}

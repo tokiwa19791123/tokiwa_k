@@ -7,10 +7,9 @@ body {}
 }
 
 .main-wrapper {
-	height: auto;
+	height: 100vw;
 	border-bottom: 0;
 	.main-contents {
-		overflow-y: inherit;
 	}
 }
 

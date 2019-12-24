@@ -127,11 +127,8 @@ body {
   }
 
   .main-wrapper {
-    height: auto;
+    height: 100vw;
     border-bottom: 0;
-  }
-  .main-wrapper .main-contents {
-    overflow-y: inherit;
   }
 
   .thumbnail-wrapper {

@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/*
+
+．〃∩ ∧＿∧
+　⊂⌒(　･ω･)   
+　　＼_っ⌒/⌒c _____ TOKIWA K PORTFOLIO 2020.001 _____
+　　　　⌒ ⌒
+*/
+/* ----- BASIC ----- */
+/* ----- LAYOUT ----- */
+body {
+  background: #fff;
+  color: #222;
+}
+
+.wrapper {
+  min-width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.main-wrapper {
+  height: calc(100vh - 160px);
+  border-bottom: 15px solid #fff;
+}
+.main-wrapper .main-contents {
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.content-wrapper {
+  padding: 15px;
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  height: 160px;
+}
+.thumbnail-wrapper .thumbnails {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.thumbnail-wrapper .thumbnails .thumbnail {
+  width: 240px;
+  height: 160px;
+}
+.thumbnail-wrapper .thumbnails .thumbnail a {
+  display: block;
+  transition: 0.3s;
+}
+.thumbnail-wrapper .thumbnails .thumbnail a img {
+  transition: 0.3s;
+}
+.thumbnail-wrapper .thumbnails .thumbnail a img:hover {
+  opacity: 0.7;
+}
+.thumbnail-wrapper .thumbnail-controler {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  height: 160px;
+  border: none;
+  background: #06c;
+  color: #fff;
+  transition: 0.3s;
+}
+.thumbnail-wrapper .thumbnail-controler:hover {
+  background: #4ae;
+}
+.thumbnail-wrapper .thumbnail-controler.controler-left {
+  left: 0;
+}
+.thumbnail-wrapper .thumbnail-controler.controler-right {
+  right: 0;
+}
+
+/* ----- PROFILE ----- */
+.profile-list li {
+  margin-top: 16px;
+}
+.profile-list li:first-of-type {
+  margin-top: 0;
+}
+
+/* ----- SKILL ----- */
+.skill-status {
+  border-top: 1px dashed #555;
+}
+.skill-status li {
+  background: url(../images/skill_star.png) no-repeat;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px dashed #555;
+}
+.skill-status li.s1 {
+  background-position: right 0px;
+}
+.skill-status li.s2 {
+  background-position: right -40px;
+}
+.skill-status li.s3 {
+  background-position: right -80px;
+}
+.skill-status li.s4 {
+  background-position: right -120px;
+}
+.skill-status li.s5 {
+  background-position: right -160px;
+}
+
+/* ----- SMART PHONE ----- */
+@media screen and (max-width: 580px) {
+  /* ----- LAYOUT ----- */
+  .wrapper {
+    max-height: none;
+  }
+
+  .thumbnail-wrapper {
+    height: auto;
+  }
+  .thumbnail-wrapper .thumbnails {
+    position: inherit;
+    left: 0;
+    right: 0;
+    overflow: auto;
+  }
+  .thumbnail-wrapper .thumbnails .thumbnail {
+    width: 50%;
+    height: auto;
+  }
+  .thumbnail-wrapper .thumbnail-controler {
+    display: none;
+  }
+}

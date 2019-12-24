@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/*
+
+．〃∩ ∧＿∧
+　⊂⌒(　･ω･)   
+　　＼_っ⌒/⌒c _____ TOKIWA K PORTFOLIO 2020.001 _____
+　　　　⌒ ⌒
+*/
+
+@import './__common/palet';
+@import './__common/mixin';
+
+/* ----- BASIC ----- */
+
+@import './basic/layout';
+@import './basic/profile';
+/* ----- SMART PHONE ----- */
+
+@media screen and (max-width: 580px) {
+	@import './sp/layout';
+}

@@ -36,5 +36,6 @@ function responsive() {
 	} else {
 		$('#thumbnails').removeAttr('style');
 		$('#thumbnails').find('a').attr('target', 'blink');
+		$('#main').attr('src','top.html');
 	}
 }

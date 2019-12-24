@@ -126,6 +126,14 @@ body {
     max-height: none;
   }
 
+  .main-wrapper {
+    height: auto;
+    border-bottom: 0;
+  }
+  .main-wrapper .main-contents {
+    overflow-y: inherit;
+  }
+
   .thumbnail-wrapper {
     height: auto;
   }
@@ -138,6 +146,9 @@ body {
   .thumbnail-wrapper .thumbnails .thumbnail {
     width: 50%;
     height: auto;
+  }
+  .thumbnail-wrapper .thumbnails .thumbnail:nth-of-type(2n + 1) {
+    text-align: right;
   }
   .thumbnail-wrapper .thumbnail-controler {
     display: none;

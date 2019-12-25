@@ -6,6 +6,264 @@
 　　＼_っ⌒/⌒c _____ TOKIWA K PORTFOLIO 2020.01.01 _____
 　　　　⌒ ⌒
 */
+/* ----- RESET ----- */
+html {
+  box-sizing: border-box;
+  word-break: break-word;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+hr {
+  border: none;
+  margin: 10px 0;
+  border-top: 1px solid;
+  height: 0;
+  overflow: visible;
+}
+
+details,
+main {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent;
+}
+a:active, a:hover {
+  outline-width: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+}
+
+pre {
+  font-size: 1.0em;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+fieldset {
+  border: 1px solid;
+  padding: 10px;
+}
+
+legend {
+  border: 0;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0 0.5em;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  border: none;
+  border: 1px solid;
+  border-radius: 0;
+  font: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+}
+select::-ms-expand {
+  display: none;
+}
+select::-ms-value {
+  color: currentColor;
+}
+
+optgroup {
+  font: inherit;
+  font-weight: bold;
+}
+
+[type="text"],
+[type="number"],
+[type="tel"],
+[type="mail"],
+[type="email"],
+[type="url"],
+[type="password"],
+[type="date"],
+[type="time"],
+[type="search"],
+[type="range"] {
+  width: 100%;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+[type="range"] {
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+label + label {
+  margin-left: 0.5em;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+  overflow: visible;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  -webkit-appearance: button;
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+[disabled] {
+  cursor: default;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+ul {
+  list-style: none;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-disabled] {
+  cursor: default;
+}
+
 /* ----- OPTION ----- */
 @-webkit-keyframes fadein {
   0% {
@@ -32,239 +290,167 @@
   }
 }
 /* ----- BASIC ----- */
-/* ----- LAYOUT ----- */
-body {
-  background: #fff;
-  color: #222;
+/* ----- PERAICHI ----- */
+.content_box {
+  padding: 15px 50px 50vh 15px;
+  min-height: 100vh;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 100px;
-}
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-  margin-top: 0;
-}
-
-.wrapper {
-  min-width: 100%;
-  max-height: 100vh;
-  overflow: hidden;
-}
-
-.main-wrapper {
-  height: calc(100vh - 160px);
-  border-bottom: 15px solid #fff;
-}
-.main-wrapper .main-contents {
+.navigation_switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
   border: none;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
+  background: transparent;
+  z-index: 9999;
+  cursor: inherit;
 }
-
-.content-wrapper {
-  padding: 15px;
-  animation: fadein 0.3s 1 linear forwards;
-  animation-delay: 0s;
-}
-
-.thumbnail-wrapper {
+.navigation_switch .switch {
   position: relative;
-  height: 160px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #4ae;
+  cursor: pointer;
 }
-.thumbnail-wrapper .thumbnails {
+.navigation_switch .switch span {
+  display: block;
   position: absolute;
-  top: 0;
-  bottom: 0;
   left: 20px;
   right: 20px;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.thumbnail-wrapper .thumbnails .thumbnail {
-  width: 240px;
-  height: 160px;
-}
-.thumbnail-wrapper .thumbnails .thumbnail a {
-  display: block;
-  position: relative;
+  background: #fff;
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
   transition: 0.3s;
 }
-.thumbnail-wrapper .thumbnails .thumbnail a img {
-  display: block;
-  transition: 0.3s;
+.navigation_switch .switch span.switch_1 {
+  top: 22px;
 }
-.thumbnail-wrapper .thumbnails .thumbnail a img:hover {
-  opacity: 0.7;
+.navigation_switch .switch span.switch_2 {
+  top: 29px;
 }
-.thumbnail-wrapper .thumbnail-controler {
-  position: absolute;
+.navigation_switch .switch span.switch_3 {
+  top: 36px;
+}
+.navigation_switch .switch.open {
+  background: #fff;
+}
+.navigation_switch .switch.open span {
+  width: 25px;
+  background: #c00;
+}
+.navigation_switch .switch.open span.switch_1 {
+  transform: translateX(-4px) translateY(7px) rotate(135deg);
+}
+.navigation_switch .switch.open span.switch_2 {
+  opacity: 0.0;
+}
+.navigation_switch .switch.open span.switch_3 {
+  transform: translateX(-4px) translateY(-7px) rotate(-135deg);
+}
+
+.navigation {
+  display: none;
+  position: fixed;
   top: 0;
   bottom: 0;
-  width: 20px;
-  height: 160px;
-  border: none;
-  background: #06c;
+  left: 0;
+  right: 0;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.navigation div {
+  line-height: 2.0;
+  text-align: center;
+  cursor: pointer;
+}
+.navigation div span {
   color: #fff;
+  font-size: 2.0em;
+  font-weight: bold;
+}
+
+.indicator {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  list-style: none;
+}
+.indicator li {
+  margin-bottom: 5px;
+  padding: 8px;
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.indicator li span {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border: 2px solid #4ae;
+  border-radius: 100%;
   transition: 0.3s;
 }
-.thumbnail-wrapper .thumbnail-controler:hover {
-  background: #4ae;
+.indicator li:hover {
+  padding: 0;
 }
-.thumbnail-wrapper .thumbnail-controler.controler-left {
-  left: 0;
+.indicator li:hover span {
+  width: 20px;
+  height: 20px;
+  border-color: #8df;
 }
-.thumbnail-wrapper .thumbnail-controler.controler-right {
-  right: 0;
+.indicator li.active {
+  padding: 0;
 }
-
-/* ----- FLEX ----- */
-._flex-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-._flex-1-2 {
-  width: 50%;
-}
-
-/* ----- PROFILE ----- */
-.profile-list li {
-  margin-top: 16px;
-}
-.profile-list li:first-of-type {
-  margin-top: 0;
-}
-
-/* ----- SKILL ----- */
-.skill-status {
-  border-top: 1px dashed #555;
-}
-.skill-status li {
-  background: url(../images/skill_star.png) no-repeat;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px dashed #555;
-}
-.skill-status li.s1 {
-  background-position: right 0px;
-}
-.skill-status li.s2 {
-  background-position: right -40px;
-}
-.skill-status li.s3 {
-  background-position: right -80px;
-}
-.skill-status li.s4 {
-  background-position: right -120px;
-}
-.skill-status li.s5 {
-  background-position: right -160px;
-}
-
-/* ----- SOURCE CODE ----- */
-.result-box {
-  margin-top: 15px;
-}
-.result-box h2 {
-  margin-top: 15px;
-}
-
-._bg_black {
-  display: inline-block;
-  padding: 0 15px;
-  border-radius: 3px;
-  background: #222;
-}
-
-._bg_gray {
-  display: inline-block;
-  padding: 0 15px;
-  border-radius: 3px;
-  background: #aaa;
-}
-
-.source-box {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.source-box .source-html-box {
-  width: calc((100% - 15px) / 2);
-}
-.source-box .source-css-box {
-  width: calc((100% - 15px) / 2);
-}
-
-.prettyprint {
-  border-radius: 10px;
-  overflow: hidden;
-}
-.prettyprint ol {
-  padding-left: 40px;
-}
-.prettyprint ol li {
-  color: #aaa;
-  font-size: 0.75em;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.indicator li.active span {
+  width: 20px;
+  height: 20px;
 }
 
 /* ----- SMART PHONE ----- */
 @media screen and (max-width: 580px) {
-  /* ----- LAYOUT ----- */
-  .wrapper {
-    max-height: none;
+  /* ----- PERAICHI ----- */
+  .content_box {
+    padding: 50px 15px 25vh;
   }
 
-  .main-wrapper {
-    height: 100vw;
-    border-bottom: 0;
-  }
-
-  .thumbnail-wrapper {
-    height: auto;
-  }
-  .thumbnail-wrapper .thumbnails {
-    position: inherit;
+  .navigation_switch {
+    top: 0;
     left: 0;
     right: 0;
-    overflow: auto;
+    width: 100%;
+    background: #4ae;
   }
-  .thumbnail-wrapper .thumbnails .thumbnail {
-    width: 50%;
-    height: auto;
+  .navigation_switch .switch {
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
   }
-  .thumbnail-wrapper .thumbnails .thumbnail:nth-of-type(2n + 1) {
-    text-align: right;
+  .navigation_switch .switch span {
+    left: 15px;
+    right: 15px;
   }
-  .thumbnail-wrapper .thumbnail-controler {
-    display: none;
+  .navigation_switch .switch span.switch_1 {
+    top: 17px;
+  }
+  .navigation_switch .switch span.switch_2 {
+    top: 24px;
+  }
+  .navigation_switch .switch span.switch_3 {
+    top: 31px;
   }
 
-  /* ----- SOURCE CODE ----- */
-  .source-box .source-html-box {
-    width: 100%;
+  .navigation {
+    padding-top: 70px;
   }
-  .source-box .source-css-box {
-    margin-top: 15px;
-    width: 100%;
+  .navigation div span {
+    font-size: 1.5em;
+  }
+
+  .indicator {
+    display: none;
   }
 }

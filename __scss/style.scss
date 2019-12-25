@@ -9,17 +9,14 @@
 
 @import './__common/palet';
 @import './__common/mixin';
+@import './__common/reset';
 @import './__common/option';
 
 /* ----- BASIC ----- */
 
-@import './basic/layout';
-@import './basic/flex';
-@import './basic/profile';
-@import './basic/source';
+@import './basic/peraichi';
 /* ----- SMART PHONE ----- */
 
 @media screen and (max-width: 580px) {
-	@import './sp/layout';
-	@import './sp/source';
+	@import './sp/peraichi';
 }

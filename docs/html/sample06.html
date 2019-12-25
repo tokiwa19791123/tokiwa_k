@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="トキワK">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+<link rel="stylesheet" href="../public/css/reset.css">
+<link rel="stylesheet" href="../public/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="../public/css/style.css">
+<link rel="stylesheet" href="../public/css/sample.css">
+<title>html / CSSだけで動きのある効果</title>
+</head>
+<body>
+<div class="content-wrapper">
+<h1>html / CSSだけで動きのある効果</h1>
+
+<div class="result-box">
+	<h2>html / CSSだけでアコーディオン</h2>
+	<details class="_accordion">
+		<summary>ブラック・マジシャン / Dark Magician</summary>
+		<div>
+			★★★★★★★<br>
+			闇属性 / 魔法使い族<br>
+			攻2500 / 守2100<br>
+			魔法使いとしては、攻撃力・守備力ともに最高クラス。
+		</div>
+	</details>
+	<details class="_accordion">
+		<summary>青眼の白龍 / Blue-Eyes White Dragon</summary>
+		<div>
+			★★★★★★★★<br>
+			光属性 / ドラゴン族<br>
+			攻3000 / 守2500<br>
+			高い攻撃力を誇る伝説のドラゴン。どんな相手でも粉砕する、その破壊力は計り知れない。
+		</div>
+	</details>
+	<details class="_accordion">
+		<summary>真紅眼の黒竜 / Red-Eyes B. Dragon</summary>
+		<div>
+			★★★★★★★<br>
+			闇属性 / ドラゴン族<br>
+			攻2400 / 守2000<br>
+			真紅の眼を持つ黒竜。怒りの黒き炎はその眼に映る者全てを焼き尽くす。
+		</div>
+	</details>
+
+	<hr>
+
+	<h2>html/cssだけでタブメニュー</h2>
+	<div class="_tab">
+		<input type="radio" name="tab" value="1" id="tab1" checked>
+		<input type="radio" name="tab" value="2" id="tab2">
+		<input type="radio" name="tab" value="3" id="tab3">
+		<input type="radio" name="tab" value="4" id="tab4">
+		<ul class="_tab_switch">
+			<li class="_tab_switch1"><label for="tab1">坊っちゃん</label></li>
+			<li class="_tab_switch2"><label for="tab2">吾輩は猫である</label></li>
+			<li class="_tab_switch3"><label for="tab3">こころ</label></li>
+			<li class="_tab_switch4"><label for="tab4">三四郎</label></li>
+		</ul>
+		<div class="_tab_box _tab_box1">
+			<p>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
+		</div>
+		<div class="_tab_box _tab_box2">
+			<p>吾輩は猫である。名前はまだ無い。<br>
+				どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。（青空文庫より）</p>
+		</div>
+		<div class="_tab_box _tab_box3">
+			<p>私はその人を常に先生と呼んでいた。だからここでもただ先生と書くだけで本名は打ち明けない。これは世間を憚かる遠慮というよりも、その方が私にとって自然だからである。私はその人の記憶を呼び起すごとに、すぐ「先生」といいたくなる。筆を執っても心持は同じ事である。よそよそしい頭文字などはとても使う気にならない。（青空文庫より）</p>
+		</div>
+		<div class="_tab_box _tab_box4">
+			<p>うとうととして目がさめると女はいつのまにか、隣のじいさんと話を始めている。このじいさんはたしかに前の前の駅から乗ったいなか者である。発車まぎわに頓狂な声を出して駆け込んで来て、いきなり肌をぬいだと思ったら背中にお灸のあとがいっぱいあったので、三四郎の記憶に残っている。じいさんが汗をふいて、肌を入れて、女の隣に腰をかけたまでよく注意して見ていたくらいである。（青空文庫より）</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<h2>html/cssだけでモーダルウィンドウ</h2>
+	<div class="_modal">
+		<ul class="_modal_thumbnail">
+			<li><a href="#image1"><img src="http://placekitten.com/300/300"></a></li>
+			<li><a href="#image2"><img src="http://placekitten.com/500/500"></a></li>
+			<li><a href="#image3"><img src="http://placekitten.com/700/700"></a></li>
+		</ul>
+		<figure class="_modal_image" id="image1"><a href="#reset"><img src="http://placekitten.com/300/300"></a></figure>
+		<figure class="_modal_image" id="image2"><a href="#reset"><img src="http://placekitten.com/500/500"></a></figure>
+		<figure class="_modal_image" id="image3"><a href="#reset"><img src="http://placekitten.com/700/700"></a></figure>
+	</div>
+</div>
+</div>
+</body>
+</html>

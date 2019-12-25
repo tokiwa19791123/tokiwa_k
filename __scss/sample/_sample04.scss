@@ -1,0 +1,163 @@
+/* ----- SAMPLE 04 ----- */
+
+/* ----- RADIO COLOR ----- */
+
+._radio_color {
+	input[type="radio"] {
+		& + span {
+			transition: 0.3s;
+		}
+		&:checked {
+			@each $category in $categories {
+				$n: index($categories, $category);
+				$color: nth($colors, $n);
+				& + ._radio_color_#{$category} {
+					color: $color;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/* ----- RADIO BUTTON ----- */
+
+._radio_button {
+	label {
+		margin-left: 0;
+	}
+	input[type="radio"] {
+		display: none;
+		@each $category in $categories {
+			$n: index($categories, $category);
+			$color: nth($colors, $n);
+			& + span._radio_button_#{$category} {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px 15px;
+				line-height: 1.0;
+				border-radius: 3px;
+				background: $gray3;
+				color: $white;
+				font-weight: bold;
+				transition: 0.3s;
+			}
+			&:checked + span._radio_button_#{$category} {
+				background: $color;
+				@if $category=='white' {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+
+
+/* ----- RADIO MOVE ----- */
+
+._radio_move {
+	position: relative;
+	width: 100%;
+	@include cf;
+	input[type="radio"] {
+		display: none;
+	}
+
+	label {
+		float: left;
+		display: block;
+		position: relative;
+		padding-left: 17px;
+		width: 60px;
+		height: 20px;
+		line-height: 20px;
+		& + label {
+			margin-left: 10px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 2px;
+			bottom: 2px;
+			left: 0;
+			width: 14px;
+			height: 14px;
+			border: 1px solid $gray3;
+			border-radius: 100%;
+		}
+	}
+
+	._radio_move_checker {
+		position: absolute;
+		top: 4px;
+		bottom: 4px;
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		background: $blue3;
+		opacity: 0.0;
+		z-index: -1;
+		transition: 0.3s;
+	}
+}
+
+@for $i from 1 through 10 {
+	#_radio_move#{$i}:checked ~ ._radio_move_checker {
+		left:#{(70 * ($i - 1)) + 2}px;
+		opacity: 1.0;
+	}
+}
+
+
+/* ----- RADIO PICKUP ----- */
+
+._radio_pickup {
+	input[type="radio"] {
+		display: none;
+		& + span {
+			display: inline-block;
+			position: relative;
+			padding-left: 17px;
+			height: 20px;
+			line-height: 20px;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 2px;
+				bottom: 2px;
+				left: 0;
+				width: 14px;
+				height: 14px;
+				border: 1px solid $gray3;
+				border-radius: 100%;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 9px;
+				bottom: 9px;
+				left: 7px;
+				width: 0;
+				height: 0;
+				border-radius: 100%;
+				background: $blue3;
+				z-index: -1;
+				transition: 0.3s;
+			}
+		}
+		&:checked {
+			& + span {
+				&::after {
+					top: 4px;
+					bottom: 4px;
+					left: 2px;
+					width: 10px;
+					height: 10px;
+				}
+			}
+		}
+	}
+}

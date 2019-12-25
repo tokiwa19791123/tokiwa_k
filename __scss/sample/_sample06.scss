@@ -1,0 +1,98 @@
+/* ----- SAMPLE 06 ----- */
+
+/* ----- ACCORDION ----- */
+
+details._accordion {
+	transition: 0.3s;
+	summary {
+		cursor: pointer;
+	}
+	div {
+		padding: 10px 15px;
+	}
+	&[open] {
+		background: $yellow1;
+		summary {}
+
+	}
+}
+
+/* ----- TAB MENU ----- */
+
+._tab {
+	input[type="radio"] {
+		display: none;
+	}
+	._tab_switch {
+		li {
+			display: inline-block;
+			label {
+				display: block;
+				padding: 5px 15px;
+				line-height: 1.0;
+				border-radius: 3px 3px 0 0;
+				background: $gray2;
+				transition: 0.3s;
+			}
+		}
+	}
+	._tab_box {
+		display: none;
+		padding: 15px;
+		border: 1px solid $gray2;
+	}
+}
+
+@for $i from 1 through 4 {
+	#tab#{$i}:checked {
+		& ~ ._tab_switch ._tab_switch#{$i} label {
+			background: $blue3;
+			color: $white;
+		}
+		& ~ ._tab_box#{$i} {
+			display: block;
+			@include animation(fadein, 0.3s, 1);
+		}
+	}
+}
+
+
+/* ----- MODAL WINDOW ----- */
+
+._modal {
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		vertical-align: bottom;
+	}
+	._modal_thumbnail {
+		@include flex;
+		li {
+			margin: 0 1px 1px 0;
+			width: 100px;
+		}
+	}
+	._modal_image {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0;
+		padding: 0;
+		background: rgba($black, 0.5);
+		&:target {
+			display: block;
+			@include animation(fadein, 0.3s, 1);
+		}
+		a {
+			display: table-cell;
+			width: 100vw;
+			height: 100vh;
+			line-height: 100%;
+			vertical-align: middle;
+			text-align: center;
+		}
+	}
+}

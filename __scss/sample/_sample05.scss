@@ -1,0 +1,58 @@
+/* ----- SAMPLE 05 ----- */
+
+._bg_grd {
+	position: relative;
+	overflow: hidden;
+	margin: 5px auto;
+	padding: 5px;
+	width: 100%;
+	text-align: center;
+}
+
+@mixin bg_start($color:$black) {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		@include gradation2($color, rgba($color, 0));
+		z-index: -1;
+	}
+}
+
+@mixin bg_end($color:$black) {
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		@include gradation2(rgba($color, 0), $color);
+		z-index: -1;
+	}
+}
+
+
+
+/* ----- GRADATION START ----- */
+
+@each $category in $categories {
+	$n: index($categories, $category);
+	$color: nth($colors, $n);
+	._bg_start_#{$category} {
+		@include bg_start($color);
+	}
+}
+
+/* ----- GRADATION ENDT ----- */
+
+@each $category in $categories {
+	$n: index($categories, $category);
+	$color: nth($colors, $n);
+	._bg_end_#{$category} {
+		@include bg_end($color);
+	}
+}

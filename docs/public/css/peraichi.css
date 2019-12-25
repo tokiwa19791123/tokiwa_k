@@ -1,0 +1,119 @@
+/* ----- PERAICHI ----- */
+.content_box {
+  padding: 15px;
+  min-height: 100vh;
+}
+
+.navigation_switch {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  border: none;
+  background: transparent;
+  z-index: 9999;
+  cursor: inherit;
+}
+.navigation_switch .switch {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #4ae;
+  cursor: pointer;
+}
+.navigation_switch .switch span {
+  display: block;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  background: #fff;
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+  transition: 0.3s;
+}
+.navigation_switch .switch span.switch_1 {
+  top: 22px;
+}
+.navigation_switch .switch span.switch_2 {
+  top: 29px;
+}
+.navigation_switch .switch span.switch_3 {
+  top: 36px;
+}
+.navigation_switch .switch.open {
+  background: #fff;
+}
+.navigation_switch .switch.open span {
+  width: 25px;
+  background: #c00;
+}
+.navigation_switch .switch.open span.switch_1 {
+  transform: translateX(-4px) translateY(7px) rotate(135deg);
+}
+.navigation_switch .switch.open span.switch_2 {
+  opacity: 0.0;
+}
+.navigation_switch .switch.open span.switch_3 {
+  transform: translateX(-4px) translateY(-7px) rotate(-135deg);
+}
+
+.navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.navigation div {
+  line-height: 2.0;
+  text-align: center;
+  cursor: pointer;
+}
+.navigation div span {
+  color: #fff;
+  font-size: 2.0em;
+  font-weight: bold;
+}
+
+.indicator {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  list-style: none;
+}
+.indicator li {
+  margin-bottom: 5px;
+  padding: 8px;
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.indicator li span {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border: 2px solid #4ae;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+.indicator li:hover {
+  padding: 0;
+}
+.indicator li:hover span {
+  width: 20px;
+  height: 20px;
+  border-color: #8df;
+}
+.indicator li.active {
+  padding: 0;
+}
+.indicator li.active span {
+  width: 20px;
+  height: 20px;
+}

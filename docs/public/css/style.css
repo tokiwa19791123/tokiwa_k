@@ -6,6 +6,31 @@
 　　＼_っ⌒/⌒c _____ TOKIWA K PORTFOLIO 2020.01.01 _____
 　　　　⌒ ⌒
 */
+/* ----- OPTION ----- */
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@-moz-keyframes fadein {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
 /* ----- BASIC ----- */
 /* ----- LAYOUT ----- */
 body {
@@ -106,30 +131,6 @@ h6:first-child {
   right: 0;
 }
 
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0.0;
-  }
-  100% {
-    opacity: 1.0;
-  }
-}
-@-moz-keyframes fadein {
-  0% {
-    opacity: 0.0;
-  }
-  100% {
-    opacity: 1.0;
-  }
-}
-@keyframes fadein {
-  0% {
-    opacity: 0.0;
-  }
-  100% {
-    opacity: 1.0;
-  }
-}
 /* ----- FLEX ----- */
 ._flex-wrapper {
   display: flex;
@@ -189,6 +190,13 @@ h6:first-child {
   padding: 0 15px;
   border-radius: 3px;
   background: #222;
+}
+
+._bg_gray {
+  display: inline-block;
+  padding: 0 15px;
+  border-radius: 3px;
+  background: #aaa;
 }
 
 .source-box {

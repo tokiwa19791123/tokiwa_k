@@ -1,0 +1,60 @@
+/* ----- SAMPLE 05 ----- */
+
+._table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	width: 100%;
+	tr {
+		border-bottom: 1px solid;
+		th,
+		td {
+			padding: 5px;
+			border-right: 1px solid;
+		}
+	}
+}
+
+._table_responsive {
+	@media screen and (max-width: 580px) {
+		tr {
+			th, td {
+				display: block;
+				&:not(:last-of-type) {
+					border-bottom: 1px dotted;
+				}
+			}
+		}
+	}
+}
+
+._table_submit {
+	@media screen and (max-width: 580px) {
+		tr {
+			position: relative;
+			._table_submit_text {
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				padding: 2px 5px;
+				border-right: none;
+				border-radius: 3px;
+				background: $orange2;
+				font-size: 0.8em;
+				& + th,
+				& + td {
+					padding-top: 35px;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+
+._table_maintain {
+	._maintain {
+		width: 6.0em;
+	}
+}

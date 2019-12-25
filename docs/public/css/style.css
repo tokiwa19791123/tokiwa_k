@@ -3,7 +3,7 @@
 
 ．〃∩ ∧＿∧
 　⊂⌒(　･ω･)   
-　　＼_っ⌒/⌒c _____ TOKIWA K PORTFOLIO 2020.001 _____
+　　＼_っ⌒/⌒c _____ TOKIWA K PORTFOLIO 2020.01.01 _____
 　　　　⌒ ⌒
 */
 /* ----- BASIC ----- */
@@ -11,6 +11,23 @@
 body {
   background: #fff;
   color: #222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 100px;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
 }
 
 .wrapper {
@@ -32,6 +49,8 @@ body {
 
 .content-wrapper {
   padding: 15px;
+  animation: fadein 0.3s 1 linear forwards;
+  animation-delay: 0s;
 }
 
 .thumbnail-wrapper {
@@ -56,9 +75,11 @@ body {
 }
 .thumbnail-wrapper .thumbnails .thumbnail a {
   display: block;
+  position: relative;
   transition: 0.3s;
 }
 .thumbnail-wrapper .thumbnails .thumbnail a img {
+  display: block;
   transition: 0.3s;
 }
 .thumbnail-wrapper .thumbnails .thumbnail a img:hover {
@@ -83,6 +104,42 @@ body {
 }
 .thumbnail-wrapper .thumbnail-controler.controler-right {
   right: 0;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@-moz-keyframes fadein {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+/* ----- FLEX ----- */
+._flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+._flex-1-2 {
+  width: 50%;
 }
 
 /* ----- PROFILE ----- */
@@ -119,6 +176,49 @@ body {
   background-position: right -160px;
 }
 
+/* ----- SOURCE CODE ----- */
+.result-box {
+  margin-top: 15px;
+}
+.result-box h2 {
+  margin-top: 15px;
+}
+
+._bg_black {
+  display: inline-block;
+  padding: 0 15px;
+  border-radius: 3px;
+  background: #222;
+}
+
+.source-box {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.source-box .source-html-box {
+  width: calc((100% - 15px) / 2);
+}
+.source-box .source-css-box {
+  width: calc((100% - 15px) / 2);
+}
+
+.prettyprint {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.prettyprint ol {
+  padding-left: 40px;
+}
+.prettyprint ol li {
+  color: #aaa;
+  font-size: 0.75em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 /* ----- SMART PHONE ----- */
 @media screen and (max-width: 580px) {
   /* ----- LAYOUT ----- */
@@ -149,5 +249,14 @@ body {
   }
   .thumbnail-wrapper .thumbnail-controler {
     display: none;
+  }
+
+  /* ----- SOURCE CODE ----- */
+  .source-box .source-html-box {
+    width: 100%;
+  }
+  .source-box .source-css-box {
+    margin-top: 15px;
+    width: 100%;
   }
 }

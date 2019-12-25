@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="author" content="tokiwa kiyoshi">
+<link rel="stylesheet" href="./public/css/style.css">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script>
+<title>SAMPLE 14</title>
+</head>
+<body>
+
+<h2>簡単に背景にグラデーション</h2>
+
+<p>前半（色から透過）と後半（透過から色）の２つのグラデーションをかぶせている。</p>
+
+<div class="_background _bg_start_red _bg_end_blue">
+	<p class="fs200b">赤から青</p>
+</div>
+
+
+<div class="_background _bg_start_orange _bg_end_lime">
+	<p class="fs200b">オレンジから黄緑</p>
+</div>
+
+
+
+
+<div class="_background _bg_start_green _bg_end_purple">
+	<p class="fs200b">緑から紫</p>
+</div>
+
+
+<div class="_background _bg_start_yellow _bg_end_pink">
+	<p class="fs200b">黄色からピンク</p>
+</div>
+
+<pre class="prettyprint lang-css linenums">
+._background {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 100%;
+  line-height: 100px;
+  text-align: center;
+}
+._background::before, ._background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+._bg_start_red::before {
+  background-image: -webkit-linear-gradient(left, #c00, rgba(204, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, #c00, rgba(204, 0, 0, 0));
+  background-image: -o-linear-gradient(left, #c00, rgba(204, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, #c00, rgba(204, 0, 0, 0));
+  background-image: linear-gradient(left, #c00, rgba(204, 0, 0, 0));
+}
+
+._bg_start_orange::before {
+  background-image: -webkit-linear-gradient(left, #f60, rgba(255, 102, 0, 0));
+  background-image: -moz-linear-gradient(left, #f60, rgba(255, 102, 0, 0));
+  background-image: -o-linear-gradient(left, #f60, rgba(255, 102, 0, 0));
+  background-image: -ms-linear-gradient(left, #f60, rgba(255, 102, 0, 0));
+  background-image: linear-gradient(left, #f60, rgba(255, 102, 0, 0));
+}
+
+._bg_start_yellow::before {
+  background-image: -webkit-linear-gradient(left, #fc3, rgba(255, 204, 51, 0));
+  background-image: -moz-linear-gradient(left, #fc3, rgba(255, 204, 51, 0));
+  background-image: -o-linear-gradient(left, #fc3, rgba(255, 204, 51, 0));
+  background-image: -ms-linear-gradient(left, #fc3, rgba(255, 204, 51, 0));
+  background-image: linear-gradient(left, #fc3, rgba(255, 204, 51, 0));
+}
+
+._bg_start_lime::before {
+  background-image: -webkit-linear-gradient(left, #4e2, rgba(68, 238, 34, 0));
+  background-image: -moz-linear-gradient(left, #4e2, rgba(68, 238, 34, 0));
+  background-image: -o-linear-gradient(left, #4e2, rgba(68, 238, 34, 0));
+  background-image: -ms-linear-gradient(left, #4e2, rgba(68, 238, 34, 0));
+  background-image: linear-gradient(left, #4e2, rgba(68, 238, 34, 0));
+}
+
+._bg_start_green::before {
+  background-image: -webkit-linear-gradient(left, #060, rgba(0, 102, 0, 0));
+  background-image: -moz-linear-gradient(left, #060, rgba(0, 102, 0, 0));
+  background-image: -o-linear-gradient(left, #060, rgba(0, 102, 0, 0));
+  background-image: -ms-linear-gradient(left, #060, rgba(0, 102, 0, 0));
+  background-image: linear-gradient(left, #060, rgba(0, 102, 0, 0));
+}
+
+._bg_start_blue::before {
+  background-image: -webkit-linear-gradient(left, #06c, rgba(0, 102, 204, 0));
+  background-image: -moz-linear-gradient(left, #06c, rgba(0, 102, 204, 0));
+  background-image: -o-linear-gradient(left, #06c, rgba(0, 102, 204, 0));
+  background-image: -ms-linear-gradient(left, #06c, rgba(0, 102, 204, 0));
+  background-image: linear-gradient(left, #06c, rgba(0, 102, 204, 0));
+}
+
+._bg_start_purple::before {
+  background-image: -webkit-linear-gradient(left, #509, rgba(85, 0, 153, 0));
+  background-image: -moz-linear-gradient(left, #509, rgba(85, 0, 153, 0));
+  background-image: -o-linear-gradient(left, #509, rgba(85, 0, 153, 0));
+  background-image: -ms-linear-gradient(left, #509, rgba(85, 0, 153, 0));
+  background-image: linear-gradient(left, #509, rgba(85, 0, 153, 0));
+}
+
+._bg_start_pink::before {
+  background-image: -webkit-linear-gradient(left, #f69, rgba(255, 102, 153, 0));
+  background-image: -moz-linear-gradient(left, #f69, rgba(255, 102, 153, 0));
+  background-image: -o-linear-gradient(left, #f69, rgba(255, 102, 153, 0));
+  background-image: -ms-linear-gradient(left, #f69, rgba(255, 102, 153, 0));
+  background-image: linear-gradient(left, #f69, rgba(255, 102, 153, 0));
+}
+
+._bg_start_gray::before {
+  background-image: -webkit-linear-gradient(left, #aaa, rgba(170, 170, 170, 0));
+  background-image: -moz-linear-gradient(left, #aaa, rgba(170, 170, 170, 0));
+  background-image: -o-linear-gradient(left, #aaa, rgba(170, 170, 170, 0));
+  background-image: -ms-linear-gradient(left, #aaa, rgba(170, 170, 170, 0));
+  background-image: linear-gradient(left, #aaa, rgba(170, 170, 170, 0));
+}
+
+._bg_start_black::before {
+  background-image: -webkit-linear-gradient(left, #222, rgba(34, 34, 34, 0));
+  background-image: -moz-linear-gradient(left, #222, rgba(34, 34, 34, 0));
+  background-image: -o-linear-gradient(left, #222, rgba(34, 34, 34, 0));
+  background-image: -ms-linear-gradient(left, #222, rgba(34, 34, 34, 0));
+  background-image: linear-gradient(left, #222, rgba(34, 34, 34, 0));
+}
+
+._bg_start_white::before {
+  background-image: -webkit-linear-gradient(left, #fff, rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, #fff, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, #fff, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, #fff, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(left, #fff, rgba(255, 255, 255, 0));
+}
+
+._bg_end_red::after {
+  background-image: -webkit-linear-gradient(left, rgba(204, 0, 0, 0), #c00);
+  background-image: -moz-linear-gradient(left, rgba(204, 0, 0, 0), #c00);
+  background-image: -o-linear-gradient(left, rgba(204, 0, 0, 0), #c00);
+  background-image: -ms-linear-gradient(left, rgba(204, 0, 0, 0), #c00);
+  background-image: linear-gradient(left, rgba(204, 0, 0, 0), #c00);
+}
+
+._bg_end_orange::after {
+  background-image: -webkit-linear-gradient(left, rgba(255, 102, 0, 0), #f60);
+  background-image: -moz-linear-gradient(left, rgba(255, 102, 0, 0), #f60);
+  background-image: -o-linear-gradient(left, rgba(255, 102, 0, 0), #f60);
+  background-image: -ms-linear-gradient(left, rgba(255, 102, 0, 0), #f60);
+  background-image: linear-gradient(left, rgba(255, 102, 0, 0), #f60);
+}
+
+._bg_end_yellow::after {
+  background-image: -webkit-linear-gradient(left, rgba(255, 204, 51, 0), #fc3);
+  background-image: -moz-linear-gradient(left, rgba(255, 204, 51, 0), #fc3);
+  background-image: -o-linear-gradient(left, rgba(255, 204, 51, 0), #fc3);
+  background-image: -ms-linear-gradient(left, rgba(255, 204, 51, 0), #fc3);
+  background-image: linear-gradient(left, rgba(255, 204, 51, 0), #fc3);
+}
+
+._bg_end_lime::after {
+  background-image: -webkit-linear-gradient(left, rgba(68, 238, 34, 0), #4e2);
+  background-image: -moz-linear-gradient(left, rgba(68, 238, 34, 0), #4e2);
+  background-image: -o-linear-gradient(left, rgba(68, 238, 34, 0), #4e2);
+  background-image: -ms-linear-gradient(left, rgba(68, 238, 34, 0), #4e2);
+  background-image: linear-gradient(left, rgba(68, 238, 34, 0), #4e2);
+}
+
+._bg_end_green::after {
+  background-image: -webkit-linear-gradient(left, rgba(0, 102, 0, 0), #060);
+  background-image: -moz-linear-gradient(left, rgba(0, 102, 0, 0), #060);
+  background-image: -o-linear-gradient(left, rgba(0, 102, 0, 0), #060);
+  background-image: -ms-linear-gradient(left, rgba(0, 102, 0, 0), #060);
+  background-image: linear-gradient(left, rgba(0, 102, 0, 0), #060);
+}
+
+._bg_end_blue::after {
+  background-image: -webkit-linear-gradient(left, rgba(0, 102, 204, 0), #06c);
+  background-image: -moz-linear-gradient(left, rgba(0, 102, 204, 0), #06c);
+  background-image: -o-linear-gradient(left, rgba(0, 102, 204, 0), #06c);
+  background-image: -ms-linear-gradient(left, rgba(0, 102, 204, 0), #06c);
+  background-image: linear-gradient(left, rgba(0, 102, 204, 0), #06c);
+}
+
+._bg_end_purple::after {
+  background-image: -webkit-linear-gradient(left, rgba(85, 0, 153, 0), #509);
+  background-image: -moz-linear-gradient(left, rgba(85, 0, 153, 0), #509);
+  background-image: -o-linear-gradient(left, rgba(85, 0, 153, 0), #509);
+  background-image: -ms-linear-gradient(left, rgba(85, 0, 153, 0), #509);
+  background-image: linear-gradient(left, rgba(85, 0, 153, 0), #509);
+}
+
+._bg_end_pink::after {
+  background-image: -webkit-linear-gradient(left, rgba(255, 102, 153, 0), #f69);
+  background-image: -moz-linear-gradient(left, rgba(255, 102, 153, 0), #f69);
+  background-image: -o-linear-gradient(left, rgba(255, 102, 153, 0), #f69);
+  background-image: -ms-linear-gradient(left, rgba(255, 102, 153, 0), #f69);
+  background-image: linear-gradient(left, rgba(255, 102, 153, 0), #f69);
+}
+
+._bg_end_gray::after {
+  background-image: -webkit-linear-gradient(left, rgba(170, 170, 170, 0), #aaa);
+  background-image: -moz-linear-gradient(left, rgba(170, 170, 170, 0), #aaa);
+  background-image: -o-linear-gradient(left, rgba(170, 170, 170, 0), #aaa);
+  background-image: -ms-linear-gradient(left, rgba(170, 170, 170, 0), #aaa);
+  background-image: linear-gradient(left, rgba(170, 170, 170, 0), #aaa);
+}
+
+._bg_end_black::after {
+  background-image: -webkit-linear-gradient(left, rgba(34, 34, 34, 0), #222);
+  background-image: -moz-linear-gradient(left, rgba(34, 34, 34, 0), #222);
+  background-image: -o-linear-gradient(left, rgba(34, 34, 34, 0), #222);
+  background-image: -ms-linear-gradient(left, rgba(34, 34, 34, 0), #222);
+  background-image: linear-gradient(left, rgba(34, 34, 34, 0), #222);
+}
+
+._bg_end_white::after {
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #fff);
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #fff);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #fff);
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #fff);
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0), #fff);
+}
+
+</pre>
+
+
+
+
+
+
+
+<div class="_background _background_gradation">
+	<p class="fs200b">変化する背景</p>
+</div>
+
+<pre class="prettyprint lang-css linenums">
+._background {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 100%;
+  line-height: 100px;
+  text-align: center;
+}
+._background::before, ._background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+._background_gradation::before {
+  background-image: -webkit-linear-gradient(left, #e55, #fc3, #7f0, #4ae, #f69, #e55, #fc3, #7f0, #4ae, #f69, #e55);
+  background-image: -moz-linear-gradient(left, #e55, #fc3, #7f0, #4ae, #f69, #e55, #fc3, #7f0, #4ae, #f69, #e55);
+  background-image: -o-linear-gradient(left, #e55, #fc3, #7f0, #4ae, #f69, #e55, #fc3, #7f0, #4ae, #f69, #e55);
+  background-image: -ms-linear-gradient(left, #e55, #fc3, #7f0, #4ae, #f69, #e55, #fc3, #7f0, #4ae, #f69, #e55);
+  background-image: linear-gradient(left, #e55, #fc3, #7f0, #4ae, #f69, #e55, #fc3, #7f0, #4ae, #f69, #e55);
+  animation: bgscroll 5s infinite linear forwards;
+  animation-delay: 0s;
+}
+
+@keyframes bgscroll {
+  0% {
+    left: 0;
+    right: -100%;
+  }
+  100% {
+    left: -100%;
+    right: 0;
+  }
+}
+</pre>
+
+</body>
+</html>

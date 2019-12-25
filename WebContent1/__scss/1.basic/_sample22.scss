@@ -1,0 +1,52 @@
+/* ----- SAMPLE 22 ----- */
+
+._color_chenge {
+	@include flex;
+	._color_selecter {
+		width: calc((100% - 0.5px) / 11);
+		height: 30px;
+		box-sizing: border-box;
+		@each $category in $categories {
+			$n: index($categories, $category);
+			$color: nth($colors, $n);
+			&:nth-of-type(#{$n}) {
+				background: $color;
+				@if $category=='white' {
+					border: 1px solid $gray3;
+				}
+			}
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	._color_chenge_text {
+		padding: 10px;
+		width: 100%;
+		font-size: 2.0em;
+		font-weight: bold;
+		transition: 0.3s;
+	}
+
+
+	._color_selecter {
+		@each $category in $categories {
+			$n: index($categories, $category);
+			$color: nth($colors, $n);
+			&:nth-of-type(#{$n}) {
+				@if $category=='white' {
+					&:hover ~ ._color_chenge_text {
+						color: $color;
+						text-shadow: 1px 1px 1px $gray3;
+					}
+				}
+				@else {
+					&:hover ~ ._color_chenge_text {
+						color: $color;
+					}
+				}
+			}
+		}
+
+	}
+}

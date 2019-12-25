@@ -1,0 +1,22 @@
+/* ----- FORM ----- */
+
+[type="text"],
+[type="number"],
+[type="tel"],
+[type="mail"],
+[type="email"],
+[type="url"],
+[type="password"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="time"] {
+	width: 100%;
+	border-color: $gray2;
+}
+
+[type="search"] {
+	width: 100%;
+	border-color: $gray2;
+}

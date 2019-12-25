@@ -1,0 +1,75 @@
+/* ----- SAMPLE 18 ----- */
+
+._line {
+	margin: 20px auto;
+	height: 0;
+	border: none;
+}
+
+._line01 {
+	border-top: 1px solid $gray3;
+}
+
+._line02 {
+	border-top: 1px dotted $gray3;
+}
+
+._line03 {
+	border-top: 1px dashed $gray3;
+}
+
+._line04 {
+	border-top: 3px double $gray3;
+}
+
+._line05 {
+	height: 1px;
+	@include gradation2(rgba($gray3, 0.0) 3%, $gray3, rgba($gray3, 0.0) 97%);
+}
+
+._line06 {
+	height: 1px;
+	@include gradation2($orange2, $lime3, $purple2);
+}
+
+._line07 {
+	border-top: 1px solid $gray3;
+	text-align: center;
+	&:after {
+		content: "\002605";
+		position: relative;
+		top: -0.7em;
+		padding: 0 0.1em;
+		background: $white;
+		color: $gray3;
+	}
+}
+
+._line08 {
+	border-top: 1px dashed $gray3;
+	&:after {
+		content: "\002702";
+		position: relative;
+		top: -0.7em;
+		left: 15%;
+		padding: 0 0.1em;
+		background: $white;
+		color: $gray3;
+	}
+}
+
+._line09 {
+	height: 6px;
+	background: -webkit-linear-gradient(-60deg, transparent 40%, $gray3 45%, $gray3 55%, transparent 60%);
+	background: -moz-linear-gradient(-60deg, transparent 40%, $gray3 45%, $gray3 55%, transparent 60%);
+	background: -o-linear-gradient(-60deg, transparent 40%, $gray3 45%, $gray3 55%, transparent 60%);
+	background: -ms-linear-gradient(-60deg, transparent 40%, $gray3 45%, $gray3 55%, transparent 60%);
+	background: linear-gradient(-60deg, transparent 40%, $gray3 45%, $gray3 55%, transparent 60%);
+	background-size: 3px 6px;
+}
+
+._line10 {
+	height: 5px;
+	background: radial-gradient($red3 40%, rgba($red3, 0.0) 60%);
+	background-size: 5px 5px;
+}

@@ -5,6 +5,19 @@ body {
 	color: $black;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 100px;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
 .wrapper {
 	min-width: 100%;
 	max-height: 100vh;
@@ -24,6 +37,7 @@ body {
 
 .content-wrapper {
 	padding: 15px;
+	@include animation(fadein, 0.3s, 1);
 }
 
 .thumbnail-wrapper {
@@ -42,8 +56,10 @@ body {
 			height: 160px;
 			a {
 				display: block;
+				position: relative;
 				transition: 0.3s;
 				img {
+					display: block;
 					transition: 0.3s;
 					&:hover {
 						opacity: 0.7;
@@ -71,5 +87,15 @@ body {
 		&.controler-right {
 			right: 0;
 		}
+	}
+}
+
+
+@include keyframes(fadein) {
+	0% {
+		opacity: 0.0;
+	}
+	100% {
+		opacity: 1.0;
 	}
 }

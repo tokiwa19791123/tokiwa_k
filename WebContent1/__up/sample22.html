@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="author" content="tokiwa kiyoshi">
+<link rel="stylesheet" href="./public/css/style.css">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sons-of-obsidian"></script>
+<title>SAMPLE 22</title>
+</head>
+<body>
+
+<h2>マウスの位置で色が変わるテキスト</h2>
+
+<div class="_color_chenge">
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_selecter"> </div>
+	<div class="_color_chenge_text">ここのテキストの色が変化します</div>
+
+</div>
+
+
+
+
+<pre class="prettyprint lang-css linenums">
+._color_chenge {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+._color_chenge ._color_selecter {
+  width: calc((100% - 0.5px) / 11);
+  height: 30px;
+  box-sizing: border-box;
+}
+._color_chenge ._color_selecter:nth-of-type(1) {
+  background: #c00;
+}
+._color_chenge ._color_selecter:nth-of-type(2) {
+  background: #f60;
+}
+._color_chenge ._color_selecter:nth-of-type(3) {
+  background: #fc3;
+}
+._color_chenge ._color_selecter:nth-of-type(4) {
+  background: #4e2;
+}
+._color_chenge ._color_selecter:nth-of-type(5) {
+  background: #060;
+}
+._color_chenge ._color_selecter:nth-of-type(6) {
+  background: #06c;
+}
+._color_chenge ._color_selecter:nth-of-type(7) {
+  background: #509;
+}
+._color_chenge ._color_selecter:nth-of-type(8) {
+  background: #f69;
+}
+._color_chenge ._color_selecter:nth-of-type(9) {
+  background: #aaa;
+}
+._color_chenge ._color_selecter:nth-of-type(10) {
+  background: #222;
+}
+._color_chenge ._color_selecter:nth-of-type(11) {
+  background: #fff;
+  border: 1px solid #555;
+}
+._color_chenge ._color_selecter:hover {
+  cursor: pointer;
+}
+._color_chenge ._color_chenge_text {
+  padding: 10px;
+  width: 100%;
+  font-size: 2.0em;
+  font-weight: bold;
+  transition: 0.3s;
+}
+._color_chenge ._color_selecter:nth-of-type(1):hover ~ ._color_chenge_text {
+  color: #c00;
+}
+._color_chenge ._color_selecter:nth-of-type(2):hover ~ ._color_chenge_text {
+  color: #f60;
+}
+._color_chenge ._color_selecter:nth-of-type(3):hover ~ ._color_chenge_text {
+  color: #fc3;
+}
+._color_chenge ._color_selecter:nth-of-type(4):hover ~ ._color_chenge_text {
+  color: #4e2;
+}
+._color_chenge ._color_selecter:nth-of-type(5):hover ~ ._color_chenge_text {
+  color: #060;
+}
+._color_chenge ._color_selecter:nth-of-type(6):hover ~ ._color_chenge_text {
+  color: #06c;
+}
+._color_chenge ._color_selecter:nth-of-type(7):hover ~ ._color_chenge_text {
+  color: #509;
+}
+._color_chenge ._color_selecter:nth-of-type(8):hover ~ ._color_chenge_text {
+  color: #f69;
+}
+._color_chenge ._color_selecter:nth-of-type(9):hover ~ ._color_chenge_text {
+  color: #aaa;
+}
+._color_chenge ._color_selecter:nth-of-type(10):hover ~ ._color_chenge_text {
+  color: #222;
+}
+._color_chenge ._color_selecter:nth-of-type(11):hover ~ ._color_chenge_text {
+  color: #fff;
+  text-shadow: 1px 1px 1px #555;
+}
+</pre>
+
+</body>
+</html>

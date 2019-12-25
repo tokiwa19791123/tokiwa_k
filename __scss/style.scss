@@ -3,7 +3,7 @@
 
 ．〃∩ ∧＿∧
 　⊂⌒(　･ω･)   
-　　＼_っ⌒/⌒c _____ TOKIWA K PORTFOLIO 2020.001 _____
+　　＼_っ⌒/⌒c _____ TOKIWA K PORTFOLIO 2020.01.01 _____
 　　　　⌒ ⌒
 */
 
@@ -13,9 +13,12 @@
 /* ----- BASIC ----- */
 
 @import './basic/layout';
+@import './basic/flex';
 @import './basic/profile';
+@import './basic/source';
 /* ----- SMART PHONE ----- */
 
 @media screen and (max-width: 580px) {
 	@import './sp/layout';
+	@import './sp/source';
 }

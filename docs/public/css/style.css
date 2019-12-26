@@ -264,48 +264,96 @@ svg:not([fill]) {
   cursor: default;
 }
 
-/* ----- OPTION ----- */
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0.0;
-  }
-  100% {
-    opacity: 1.0;
-  }
-}
-@-moz-keyframes fadein {
-  0% {
-    opacity: 0.0;
-  }
-  100% {
-    opacity: 1.0;
-  }
-}
-@keyframes fadein {
-  0% {
-    opacity: 0.0;
-  }
-  100% {
-    opacity: 1.0;
-  }
-}
 /* ----- BASIC ----- */
-/* ----- PERAICHI ----- */
-.content_box {
-  padding: 15px 50px 50vh 15px;
-  min-height: 100vh;
+/* ----- LAYOUT ----- */
+body {
+  background: #fff;
+  color: #222;
 }
 
-.navigation_switch {
+hr {
+  margin: 15px 0;
+}
+
+/* ----- FLEX ----- */
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.flex-child {
+  margin: 15px 15px 0 0;
+}
+
+/* ----- PROFILE ----- */
+.profile li {
+  margin-top: 16px;
+}
+.profile li:first-of-type {
+  margin-top: 0;
+}
+
+/* ----- SKILL ----- */
+.skill-status {
+  margin-top: 30px;
+  border-top: 1px dashed #555;
+}
+.skill-status li {
+  background: url(../images/skill_star.png) no-repeat;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px dashed #555;
+}
+.skill-status li.s1 {
+  background-position: right 0px;
+}
+.skill-status li.s2 {
+  background-position: right -40px;
+}
+.skill-status li.s3 {
+  background-position: right -80px;
+}
+.skill-status li.s4 {
+  background-position: right -120px;
+}
+.skill-status li.s5 {
+  background-position: right -160px;
+}
+
+/* ----- PERAICHI ----- */
+.peraichi-wrapper {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+
+.peraichi-box {
+  scroll-snap-align: start;
+  padding: 15px 50px 15px 15px;
+  width: 100%;
+  min-height: 100vh;
+}
+.peraichi-box:nth-child(odd) {
+  background: #eefaff;
+}
+.peraichi-box h1 {
+  margin-bottom: 50px;
+}
+
+.navigation-switch {
   position: fixed;
   top: 15px;
-  right: 15px;
+  right: 30px;
   border: none;
   background: transparent;
   z-index: 9999;
   cursor: inherit;
 }
-.navigation_switch .switch {
+.navigation-switch .switch {
   position: relative;
   width: 60px;
   height: 60px;
@@ -313,7 +361,7 @@ svg:not([fill]) {
   background: #4ae;
   cursor: pointer;
 }
-.navigation_switch .switch span {
+.navigation-switch .switch span {
   display: block;
   position: absolute;
   left: 20px;
@@ -324,29 +372,29 @@ svg:not([fill]) {
   border-radius: 1px;
   transition: 0.3s;
 }
-.navigation_switch .switch span.switch_1 {
+.navigation-switch .switch span:nth-of-type(1) {
   top: 22px;
 }
-.navigation_switch .switch span.switch_2 {
+.navigation-switch .switch span:nth-of-type(2) {
   top: 29px;
 }
-.navigation_switch .switch span.switch_3 {
+.navigation-switch .switch span:nth-of-type(3) {
   top: 36px;
 }
-.navigation_switch .switch.open {
+.navigation-switch .switch.open {
   background: #fff;
 }
-.navigation_switch .switch.open span {
+.navigation-switch .switch.open span {
   width: 25px;
   background: #c00;
 }
-.navigation_switch .switch.open span.switch_1 {
+.navigation-switch .switch.open span:nth-of-type(1) {
   transform: translateX(-4px) translateY(7px) rotate(135deg);
 }
-.navigation_switch .switch.open span.switch_2 {
+.navigation-switch .switch.open span:nth-of-type(2) {
   opacity: 0.0;
 }
-.navigation_switch .switch.open span.switch_3 {
+.navigation-switch .switch.open span:nth-of-type(3) {
   transform: translateX(-4px) translateY(-7px) rotate(-135deg);
 }
 
@@ -361,20 +409,21 @@ svg:not([fill]) {
   background: rgba(0, 0, 0, 0.7);
 }
 .navigation div {
-  line-height: 2.0;
+  line-height: 1.8;
   text-align: center;
   cursor: pointer;
 }
-.navigation div span {
+.navigation div a {
   color: #fff;
-  font-size: 2.0em;
+  font-size: 1.8em;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .indicator {
   position: fixed;
   top: 50%;
-  right: 15px;
+  right: 30px;
   transform: translateY(-50%);
   list-style: none;
 }
@@ -386,7 +435,7 @@ svg:not([fill]) {
   transition: 0.3s;
   cursor: pointer;
 }
-.indicator li span {
+.indicator li a {
   display: block;
   width: 4px;
   height: 4px;
@@ -397,15 +446,7 @@ svg:not([fill]) {
 .indicator li:hover {
   padding: 0;
 }
-.indicator li:hover span {
-  width: 20px;
-  height: 20px;
-  border-color: #8df;
-}
-.indicator li.active {
-  padding: 0;
-}
-.indicator li.active span {
+.indicator li:hover a {
   width: 20px;
   height: 20px;
 }

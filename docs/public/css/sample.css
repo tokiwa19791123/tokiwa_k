@@ -1697,7 +1697,6 @@
   border-radius: 100%;
   background: #06c;
   opacity: 0.0;
-  z-index: -1;
   transition: 0.3s;
 }
 
@@ -1783,8 +1782,7 @@
   height: 0;
   border-radius: 100%;
   background: #06c;
-  z-index: -1;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 ._radio_pickup input[type="radio"]:checked + span::after {
   top: 4px;
@@ -2170,6 +2168,7 @@ details._accordion[open] {
   display: none;
   padding: 15px;
   border: 1px solid #aaa;
+  background: #fff;
 }
 
 #tab1:checked ~ ._tab_switch ._tab_switch1 label {

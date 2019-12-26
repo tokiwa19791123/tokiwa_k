@@ -10,10 +10,10 @@
 @import './__common/palet';
 @import './__common/mixin';
 @import './__common/reset';
-@import './__common/option';
+//@import './__common/option';
 
 /* ----- BASIC ----- */
-
+@import './basic/layout';
 @import './basic/peraichi';
 /* ----- SMART PHONE ----- */
 

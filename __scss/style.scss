@@ -18,5 +18,6 @@
 /* ----- SMART PHONE ----- */
 
 @media screen and (max-width: 560px) {
+    @import './sp/layout';
 	@import './sp/peraichi';
 }

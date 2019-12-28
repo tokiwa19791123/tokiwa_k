@@ -16,9 +16,10 @@ html {}
 	width: 100%;
 	min-height: 100vh;
 	&:nth-child(odd) {
-		background: lighten($blue1,20%);
+		background-color: lighten($blue1,20%);
 	}
 	h1 {
+        margin-right: 30px;
 		margin-bottom: 50px;
 	}
 }

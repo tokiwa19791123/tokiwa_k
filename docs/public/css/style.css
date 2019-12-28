@@ -289,7 +289,24 @@ hr {
   margin: 15px 15px 0 0;
 }
 
+/* ----- HEADER ----- */
+header.peraichi-box {
+  background-image: url(../images/image.png);
+  background-position: right bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* ----- PROFILE ----- */
+.profile-image {
+  display: block;
+  width: 300px;
+  border-radius: 100%;
+}
+
+.profile {
+  margin-top: 30px;
+}
 .profile li {
   margin-top: 16px;
 }
@@ -343,17 +360,17 @@ hr {
 }
 
 @-webkit-keyframes appeal {
-  /*
-  0% {
-  	top: -40px;
-  }
-  50% {
-  	top: 0;
-  }
-  100% {
-  	top: 40px;
-  }
-  */
+    /*
+	0% {
+		top: -40px;
+	}
+	50% {
+		top: 0;
+	}
+	100% {
+		top: 40px;
+	}
+	*/
   0% {
     top: -40px;
     color: #fff;
@@ -443,17 +460,17 @@ hr {
   }
 }
 @-moz-keyframes appeal {
-  /*
-  0% {
-  	top: -40px;
-  }
-  50% {
-  	top: 0;
-  }
-  100% {
-  	top: 40px;
-  }
-  */
+    /*
+	0% {
+		top: -40px;
+	}
+	50% {
+		top: 0;
+	}
+	100% {
+		top: 40px;
+	}
+	*/
   0% {
     top: -40px;
     color: #fff;
@@ -543,17 +560,17 @@ hr {
   }
 }
 @keyframes appeal {
-  /*
-  0% {
-  	top: -40px;
-  }
-  50% {
-  	top: 0;
-  }
-  100% {
-  	top: 40px;
-  }
-  */
+    /*
+	0% {
+		top: -40px;
+	}
+	50% {
+		top: 0;
+	}
+	100% {
+		top: 40px;
+	}
+	*/
   0% {
     top: -40px;
     color: #fff;
@@ -658,9 +675,10 @@ hr {
   min-height: 100vh;
 }
 .peraichi-box:nth-child(odd) {
-  background: #eefaff;
+  background-color: #eefaff;
 }
 .peraichi-box h1 {
+  margin-right: 30px;
   margin-bottom: 50px;
 }
 
@@ -773,6 +791,11 @@ hr {
 
 /* ----- SMART PHONE ----- */
 @media screen and (max-width: 560px) {
+  /* ----- HEADER ----- */
+  header.peraichi-box {
+    background-image: none;
+  }
+
   /* ----- PERAICHI ----- */
   .content_box {
     padding: 50px 15px 25vh;

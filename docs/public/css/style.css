@@ -267,8 +267,10 @@ svg:not([fill]) {
 /* ----- BASIC ----- */
 /* ----- LAYOUT ----- */
 body {
+  line-height: 1.6;
   background: #fff;
   color: #222;
+  font-size: 16px;
 }
 
 hr {
@@ -322,6 +324,324 @@ hr {
   background-position: right -160px;
 }
 
+/* ----- APPEAL ----- */
+.appeal-wrapper {
+  position: relative;
+  margin: 20px 0;
+  height: 40px;
+  line-height: 40px;
+  font-size: 32px;
+  overflow: hidden;
+}
+.appeal-wrapper .appeal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  animation: appeal 5s infinite linear forwards;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes appeal {
+  /*
+  0% {
+  	top: -40px;
+  }
+  50% {
+  	top: 0;
+  }
+  100% {
+  	top: 40px;
+  }
+  */
+  0% {
+    top: -40px;
+    color: #fff;
+  }
+  9.0909090909% {
+    top: 0;
+    color: #c00;
+    opacity: 1.0;
+  }
+  18.1818181818% {
+    top: 40px;
+    color: #f60;
+    opacity: 1.0;
+  }
+  18.2818181818% {
+    opacity: 0.0;
+  }
+  19.1818181818% {
+    top: -40px;
+    opacity: 0.0;
+  }
+  27.2727272727% {
+    top: -40px;
+    color: #fc3;
+    opacity: 1.0;
+  }
+  36.3636363636% {
+    top: 0;
+    color: #4e2;
+    opacity: 1.0;
+  }
+  45.4545454545% {
+    top: 40px;
+    color: #060;
+    opacity: 1.0;
+  }
+  45.5545454545% {
+    opacity: 0.0;
+  }
+  46.4545454545% {
+    top: -40px;
+    opacity: 0.0;
+  }
+  54.5454545455% {
+    top: -40px;
+    color: #06c;
+    opacity: 1.0;
+  }
+  63.6363636364% {
+    top: 0;
+    color: #509;
+    opacity: 1.0;
+  }
+  72.7272727273% {
+    top: 40px;
+    color: #f69;
+    opacity: 1.0;
+  }
+  72.8272727273% {
+    opacity: 0.0;
+  }
+  73.7272727273% {
+    top: -40px;
+    opacity: 0.0;
+  }
+  81.8181818182% {
+    top: -40px;
+    color: #aaa;
+    opacity: 1.0;
+  }
+  90.9090909091% {
+    top: 0;
+    color: #222;
+    opacity: 1.0;
+  }
+  100% {
+    top: 40px;
+    color: #fff;
+    opacity: 1.0;
+  }
+  100.1% {
+    opacity: 0.0;
+  }
+  101% {
+    top: -40px;
+    opacity: 0.0;
+  }
+}
+@-moz-keyframes appeal {
+  /*
+  0% {
+  	top: -40px;
+  }
+  50% {
+  	top: 0;
+  }
+  100% {
+  	top: 40px;
+  }
+  */
+  0% {
+    top: -40px;
+    color: #fff;
+  }
+  9.0909090909% {
+    top: 0;
+    color: #c00;
+    opacity: 1.0;
+  }
+  18.1818181818% {
+    top: 40px;
+    color: #f60;
+    opacity: 1.0;
+  }
+  18.2818181818% {
+    opacity: 0.0;
+  }
+  19.1818181818% {
+    top: -40px;
+    opacity: 0.0;
+  }
+  27.2727272727% {
+    top: -40px;
+    color: #fc3;
+    opacity: 1.0;
+  }
+  36.3636363636% {
+    top: 0;
+    color: #4e2;
+    opacity: 1.0;
+  }
+  45.4545454545% {
+    top: 40px;
+    color: #060;
+    opacity: 1.0;
+  }
+  45.5545454545% {
+    opacity: 0.0;
+  }
+  46.4545454545% {
+    top: -40px;
+    opacity: 0.0;
+  }
+  54.5454545455% {
+    top: -40px;
+    color: #06c;
+    opacity: 1.0;
+  }
+  63.6363636364% {
+    top: 0;
+    color: #509;
+    opacity: 1.0;
+  }
+  72.7272727273% {
+    top: 40px;
+    color: #f69;
+    opacity: 1.0;
+  }
+  72.8272727273% {
+    opacity: 0.0;
+  }
+  73.7272727273% {
+    top: -40px;
+    opacity: 0.0;
+  }
+  81.8181818182% {
+    top: -40px;
+    color: #aaa;
+    opacity: 1.0;
+  }
+  90.9090909091% {
+    top: 0;
+    color: #222;
+    opacity: 1.0;
+  }
+  100% {
+    top: 40px;
+    color: #fff;
+    opacity: 1.0;
+  }
+  100.1% {
+    opacity: 0.0;
+  }
+  101% {
+    top: -40px;
+    opacity: 0.0;
+  }
+}
+@keyframes appeal {
+  /*
+  0% {
+  	top: -40px;
+  }
+  50% {
+  	top: 0;
+  }
+  100% {
+  	top: 40px;
+  }
+  */
+  0% {
+    top: -40px;
+    color: #fff;
+  }
+  9.0909090909% {
+    top: 0;
+    color: #c00;
+    opacity: 1.0;
+  }
+  18.1818181818% {
+    top: 40px;
+    color: #f60;
+    opacity: 1.0;
+  }
+  18.2818181818% {
+    opacity: 0.0;
+  }
+  19.1818181818% {
+    top: -40px;
+    opacity: 0.0;
+  }
+  27.2727272727% {
+    top: -40px;
+    color: #fc3;
+    opacity: 1.0;
+  }
+  36.3636363636% {
+    top: 0;
+    color: #4e2;
+    opacity: 1.0;
+  }
+  45.4545454545% {
+    top: 40px;
+    color: #060;
+    opacity: 1.0;
+  }
+  45.5545454545% {
+    opacity: 0.0;
+  }
+  46.4545454545% {
+    top: -40px;
+    opacity: 0.0;
+  }
+  54.5454545455% {
+    top: -40px;
+    color: #06c;
+    opacity: 1.0;
+  }
+  63.6363636364% {
+    top: 0;
+    color: #509;
+    opacity: 1.0;
+  }
+  72.7272727273% {
+    top: 40px;
+    color: #f69;
+    opacity: 1.0;
+  }
+  72.8272727273% {
+    opacity: 0.0;
+  }
+  73.7272727273% {
+    top: -40px;
+    opacity: 0.0;
+  }
+  81.8181818182% {
+    top: -40px;
+    color: #aaa;
+    opacity: 1.0;
+  }
+  90.9090909091% {
+    top: 0;
+    color: #222;
+    opacity: 1.0;
+  }
+  100% {
+    top: 40px;
+    color: #fff;
+    opacity: 1.0;
+  }
+  100.1% {
+    opacity: 0.0;
+  }
+  101% {
+    top: -40px;
+    opacity: 0.0;
+  }
+}
 /* ----- PERAICHI ----- */
 .peraichi-wrapper {
   scroll-behavior: smooth;
@@ -452,7 +772,7 @@ hr {
 }
 
 /* ----- SMART PHONE ----- */
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 560px) {
   /* ----- PERAICHI ----- */
   .content_box {
     padding: 50px 15px 25vh;

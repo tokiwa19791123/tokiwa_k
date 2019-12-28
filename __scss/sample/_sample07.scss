@@ -1,6 +1,6 @@
 /* ----- SAMPLE 07 ----- */
 
-@mixin slideshow($total:4, $time: ($total * 1.0s), $type:'slide') {
+@mixin slideshow($total:4, $time: 3.0s, $type:slide) {
 	margin: 15px auto;
 	width: 240px;
 	height: 240px;
@@ -83,7 +83,7 @@
 /* ----- SLIDESHOW SLIDE TYPE ----- */
 
 ._slideshow_type_slide {
-	@include slideshow();
+	@include slideshow($type: slide);
 }
 
 
@@ -94,5 +94,5 @@
 /* ----- SLIDESHOW FADE TYPE ----- */
 
 ._slideshow_type_fade {
-	@include slideshow($type: 'fade');
+	@include slideshow($type: fade);
 }

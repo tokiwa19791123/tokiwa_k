@@ -1,8 +1,10 @@
 /* ----- LAYOUT ----- */
 
 body {
+	line-height: 1.6;
 	background: $white;
 	color: $black;
+	font-size: 16px;
 }
 
 hr {
@@ -47,5 +49,62 @@ hr {
 				background-position: right #{($i - 1) * -40px};
 			}
 		}
+	}
+}
+
+/* ----- APPEAL ----- */
+
+.appeal-wrapper {
+	position: relative;
+	margin: 20px 0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 32px;
+	overflow: hidden;
+	.appeal {
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		@include animation(appeal, 5.0s);
+	}
+}
+
+
+@include keyframes(appeal) {
+	$tops: -40px, 0, 40px;
+	/*
+	0% {
+		top: -40px;
+	}
+	50% {
+		top: 0;
+	}
+	100% {
+		top: 40px;
+	}
+	*/
+	0% {
+		top: nth($tops, 1);
+		color: $white;
+	}
+	@each $color in $colors {
+		$n: index($colors, $color);
+		#{100% / length($colors) * $n} {
+			top: nth($tops, ($n % 3) + 1);
+			color: $color;
+			opacity: 1.0;
+		}
+		@if($n % 3==2) {
+			#{(100% / length($colors) * $n) + 0.1} {
+				opacity: 0.0;
+			}
+			#{(100% / length($colors) * $n) + 1.0} {
+				top: nth($tops, 1);
+				opacity: 0.0;
+			}
+		}
+
+
 	}
 }

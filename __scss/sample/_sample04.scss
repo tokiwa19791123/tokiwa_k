@@ -104,7 +104,7 @@
 }
 
 @for $i from 1 through 10 {
-	#_radio_move#{$i}:checked ~ ._radio_move_checker {
+	#radio_move#{$i}:checked ~ ._radio_move_checker {
 		left:#{(70 * ($i - 1)) + 2}px;
 		opacity: 1.0;
 	}

@@ -1,14 +1,14 @@
 /* ----- LAYOUT ----- */
 
 body {
-    line-height: 1.6;
-    background: $white;
-    color: $black;
-    font-size: 16px;
+	line-height: 1.6;
+	background: $white;
+	color: $black;
+	font-size: 16px;
 }
 
 hr {
-    margin: 15px 0;
+	margin: 15px 0;
 }
 
 
@@ -16,113 +16,112 @@ hr {
 /* ----- FLEX ----- */
 
 .flex-wrapper {
-    @include flex;
+	@include flex;
 }
 
 .flex-child {
-    margin: 15px 15px 0 0;
+	margin: 15px 15px 0 0;
 }
 
 /* ----- HEADER ----- */
 
 header.peraichi-box {
-    background-image: url(../images/image.png);
-    background-position: right bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
+	background-image: url(../images/image.png);
+	background-position: right bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 }
 
 /* ----- PROFILE ----- */
 
 .profile-image {
-    display: block;
-    width: 300px;
-    border-radius: 100%;
+	display: block;
+	width: 300px;
+	border-radius: 100%;
 
 }
 
 .profile {
-    margin-top: 30px;
-    li {
-        margin-top: 16px;
-        &:first-of-type {
-            margin-top: 0;
-        }
-    }
+	margin-top: 30px;
+	li {
+		margin-top: 16px;
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
 }
 
 /* ----- SKILL ----- */
 
 .skill-status {
-    margin-top: 30px;
-    border-top: 1px dashed $gray3;
-    li {
-        background: url(../images/skill_star.png) no-repeat;
-        line-height: 40px;
-        height: 40px;
-        border-bottom: 1px dashed $gray3;
-        @for $i from 1 through 5 {
-            &.s#{$i} {
-                background-position: right #{($i - 1) * -40px};
-            }
-        }
-    }
+	margin-top: 30px;
+	border-top: 1px dashed $gray3;
+	li {
+		background: url(../images/skill_star.png) no-repeat;
+		line-height: 40px;
+		height: 40px;
+		border-bottom: 1px dashed $gray3;
+		@for $i from 1 through 5 {
+			&.s#{$i} {
+				background-position: right #{($i - 1) * -40px};
+			}
+		}
+	}
 }
 
 /* ----- APPEAL ----- */
 
 .appeal-wrapper {
-    position: relative;
-    margin: 20px 0;
-    height: 40px;
-    line-height: 40px;
-    font-size: 32px;
-    overflow: hidden;
-    .appeal {
-        position: absolute;
-        left: 0;
-        right: 0;
-        text-align: center;
-        @include animation(appeal, 5.0s);
-    }
+	position: relative;
+	margin: 20px 0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 32px;
+	overflow: hidden;
+	.appeal-roll {
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		@include animation(appeal-roll, 1.0s);
+		.appeal-color {
+			@include animation(appeal-color, 5.0s);
+		}
+	}
 }
 
 
-@include keyframes(appeal) {
-    $tops: -40px, 0, 40px;
-    /*
+@include keyframes(appeal-roll) {
 	0% {
 		top: -40px;
+		opacity: 1.0;
 	}
-	50% {
+	49.5% {
 		top: 0;
 	}
-	100% {
+	99% {
 		top: 40px;
+		opacity: 1.0;
 	}
-	*/
-    0% {
-        top: nth($tops, 1);
-        color: $white;
-    }
-    @each $color in $colors {
-        $n: index($colors, $color);
-        #{100% / length($colors) * $n} {
-            top: nth($tops, ($n % 3) + 1);
-            color: $color;
-            opacity: 1.0;
-        }
-        @if($n % 3==2) {
-            #{(100% / length($colors) * $n) + 0.1} {
-                opacity: 0.0;
-            }
-            #{(100% / length($colors) * $n) + 1.0} {
-                top: nth($tops, 1);
-                opacity: 0.0;
-            }
-        }
+	99.5% {
+		opacity: 0.0;
+	}
+	100% {
+		top: -40px;
+		opacity: 0.0;
+	}
+}
 
 
-    }
+@include keyframes(appeal-color) {
+	0% {
+		color: $white;
+	}
+	@each $color in $colors {
+		$n: index($colors, $color);
+		#{round(100% / length($colors) * $n)} {
+			color: $color;
+		}
+	}
 }

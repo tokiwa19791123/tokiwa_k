@@ -1,6 +1,76 @@
+/* ----- LAYOUT ----- */
+
+body {}
+
+hr {}
+
+
+
+/* ----- FLEX ----- */
+
+.flex-wrapper {}
+
+.flex-child {}
+
 /* ----- HEADER ----- */
 
 header.peraichi-box {
-    background-image: none;
+	background-image: none;
+}
 
+/* ----- PROFILE ----- */
+
+.profile-image {
+	margin: 0 auto;
+
+}
+
+.profile {
+	li {
+		&:first-of-type {}
+	}
+}
+
+/* ----- SKILL ----- */
+
+.skill-status {
+	li {
+		@for $i from 1 through 5 {
+			&.s#{$i} {}
+		}
+	}
+}
+
+/* ----- APPEAL ----- */
+
+.appeal-wrapper {
+	height: 24px;
+	line-height: 24px;
+	font-size: 24px;
+	.appeal-roll {
+		@include animation(appeal-roll, 1.0s);
+		.appeal-color {}
+	}
+}
+
+
+@include keyframes(appeal-roll) {
+	0% {
+		top: -24px;
+		opacity: 1.0;
+	}
+	49.5% {
+		top: 0;
+	}
+	99% {
+		top: 24px;
+		opacity: 1.0;
+	}
+	99.5% {
+		opacity: 0.0;
+	}
+	100% {
+		top: -24px;
+		opacity: 0.0;
+	}
 }

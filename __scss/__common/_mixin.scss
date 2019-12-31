@@ -57,7 +57,7 @@
 	background-image: -moz-linear-gradient(top, $value);
 	background-image: -o-linear-gradient(top, $value);
 	background-image: -ms-linear-gradient(top, $value);
-	background-image: linear-gradient(top, $value);
+	background-image: linear-gradient(to bottom, $value);
 }
 
 @mixin gradation2($value...) {
@@ -65,15 +65,15 @@
 	background-image: -moz-linear-gradient(left, $value);
 	background-image: -o-linear-gradient(left, $value);
 	background-image: -ms-linear-gradient(left, $value);
-	background-image: linear-gradient(left, $value);
+	background-image: linear-gradient(to right, $value);
 }
 
 @mixin gradation3($value...) {
-	background-image: -webkit-linear-gradient(left top, $value);
-	background-image: -moz-linear-gradient(left top, $value);
-	background-image: -o-linear-gradient(left top, $value);
-	background-image: -ms-linear-gradient(left top, $value);
-	background-image: linear-gradient(left top, $value);
+	background-image: -webkit-linear-gradient(top left, $value);
+	background-image: -moz-linear-gradient(top left, $value);
+	background-image: -o-linear-gradient(top left, $value);
+	background-image: -ms-linear-gradient(top left, $value);
+	background-image: linear-gradient(to bottom right, $value);
 }
 
 @mixin animation($name: animetion, $duration: 1.0s, $count: infinite, $direction: linear, $delay: 0.0s) {

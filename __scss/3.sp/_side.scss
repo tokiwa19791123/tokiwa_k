@@ -1,0 +1,41 @@
+// SIDE
+.side {
+	@include child('title') {
+				margin-left: -10px;
+				margin-right: -10px;
+		//		padding: 0.3em 0 0.2em;
+		//		line-height: 1.0;
+		//		background: $green3;
+		//		font-size: 1.0em;
+		//		color: $white;
+		//		text-align: center;
+	}
+	@include child('grid') {
+		padding-bottom: 10px;
+		@include flex(between);
+		@include child('item') {
+			margin-top: 10px;
+			width: calc((100% - 10.5px) / 2); //			border-radius: 10px;
+			//			@include box-shadow(0, 0, 10, $black3, 3);
+			//			overflow: hidden;
+			//			transition: 0.3s;
+			@include child('image') {
+				display: none;
+			}
+			@include child('link') {
+				//				display: block;
+				//				padding: 5px 0;
+				//				text-align: center;
+				//				font-weight: bold;
+				//				color: $black;
+				//				transition: 0.3s;
+			}
+			&:hover {
+				//				@include box-shadow(0, 0, 30, $blue3, 10);
+				a {
+					//					color: $blue3;
+				}
+			}
+		}
+	}
+}

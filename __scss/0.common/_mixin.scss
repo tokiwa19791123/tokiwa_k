@@ -1,0 +1,131 @@
+// MIXIN
+@mixin flex($content: first) {
+	display: flex;
+	flex-wrap: wrap;
+	@if $content==first {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	@elseif $content==right {
+		justify-content: flex-end;
+	}
+	@elseif $content==end {
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+	}
+	@elseif $content==between {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	@elseif $content==reverse {
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+	@elseif $content==center {
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@mixin gradation($colors: #000 #fff, $angle:0) {
+	$length: length($colors);
+	@if $length==1 {
+		background: $colors;
+	}
+	@else {
+		$gradation: null;
+		@for $i from 1 through $length {
+			@if $i==1 {
+				$gradation: nth($colors, $i);
+			}
+			@else {
+				$gradation: $gradation, nth($colors, $i);
+			}
+		} //		background-image: -webkit-linear-gradient(#{180 - $angle}deg, $gradation);
+		//		background-image: -moz-linear-gradient(#{180 - $angle}deg, $gradation);
+		//		background-image: -o-linear-gradient(#{180 - $angle}deg, $gradation);
+		//		background-image: -ms-linear-gradient(#{180 - $angle}deg, $gradation);
+		background-image: linear-gradient(#{180 - $angle}deg, $gradation);
+	}
+}
+
+@mixin box-shadow($left:10, $top:10, $blur:$top*0.8, $color: #000, $point:5) {
+	$text: null;
+	@for $i from 1 through $point {
+		@if $i==1 {
+			$text: #{$left}px #{$top}px #{$blur}px rgba($color, 0.1);
+		}
+		@else {
+			$text: $text,
+			#{decimal-ceil($left / $point * (($point + 1) - $i), 2)}px #{decimal-ceil($top / $point * (($point + 1) - $i), 2)}px #{decimal-ceil($blur / $point * (($point + 1) - $i),2)}px rgba($color, 0.1);
+		}
+	}
+	box-shadow: $text;
+}
+
+@mixin fukidashi($base: $gray2 $white, $width: 50px, $color: transparent transparent transparent transparent) {
+	$widths: null;
+	@for $i from 1 through length($width) {
+		$widths: $widths nth($width, $i);
+	}
+	$colors: null;
+	@for $i from 1 through 4 {
+		@if(nth($color, $i)==0) {
+			$colors: $colors transparent;
+		}
+		@else {
+			$colors: $colors nth($color, $i);
+		}
+	}
+	position: relative;
+	background: nth($base, 1);
+	color: nth($base, 2);
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		border-width: $widths;
+		border-style: solid;
+		border-color: $colors;
+	}
+}
+
+@mixin child($name:'value') {
+	@at-root #{&}-#{$name} {
+		@content;
+	}
+}
+
+@mixin cf {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin el {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+@mixin anime($name: animetion, $duration: 1.0s, $count: infinite, $direction: linear, $delay: 0.0s) {
+	animation: $name $duration $count $direction forwards;
+	animation-delay: $delay;
+}
+
+@mixin anime-kf($name: animetion) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}

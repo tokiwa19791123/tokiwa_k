@@ -1,23 +1,19 @@
 @charset "UTF-8";
-/*
+@import './0.common/palet';
+@import './0.common/function';
+@import './0.common/mixin';
+// BASIC
+@import './1.basic/layout';
+@import './1.basic/side';
+@import './1.basic/profile';
+// TABLET(width:960px未満)
+@media screen and (max-width: 959px) {
+	//	@import './2.tablet/layout';
+}
 
-．〃∩ ∧＿∧
-　⊂⌒(　･ω･)   
-　　＼_っ⌒/⌒c _____ TOKIWA K PORTFOLIO 2020.01.01 _____
-　　　　⌒ ⌒
-*/
-
-@import './__common/palet';
-@import './__common/mixin';
-@import './__common/reset';
-//@import './__common/option';
-
-/* ----- BASIC ----- */
-@import './basic/layout';
-@import './basic/peraichi';
-/* ----- SMART PHONE ----- */
-
-@media screen and (max-width: 560px) {
-    @import './sp/layout';
-	@import './sp/peraichi';
+// SMART PHONE(width:560px未満)
+@media screen and (max-width: 559px) {
+	@import './3.sp/layout';
+	@import './3.sp/side';
+	@import './3.sp/profile';
 }

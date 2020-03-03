@@ -1,0 +1,38 @@
+// SIDE
+.side {
+	@include child('title') {
+		margin-left: -15px;
+		margin-right: -15px;
+		padding: 0.3em 0 0.2em;
+		line-height: 1.0;
+		background: $green3;
+		font-size: 1.0em;
+		color: $white;
+		text-align: center;
+	}
+	@include child('grid') {
+		padding-bottom: 30px;
+		@include child('item') {
+			margin-top: 30px;
+			border-radius: 10px;
+			@include box-shadow(0, 0, 10, $black3, 3);
+			overflow: hidden;
+			transition: 0.3s;
+			@include child('image') {}
+			@include child('link') {
+				display: block;
+				padding: 5px 0;
+				text-align: center;
+				font-weight: bold;
+				color: $black;
+				transition: 0.3s;
+			}
+			&:hover {
+				@include box-shadow(0, 0, 30, $blue3, 10);
+				a {
+					color: $blue3;
+				}
+			}
+		}
+	}
+}

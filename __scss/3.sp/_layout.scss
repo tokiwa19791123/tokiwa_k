@@ -1,0 +1,39 @@
+// LAYOUT
+body {
+	font-size: 14px;
+}
+
+.wrapper {}
+
+.main {
+	width: 100%;
+	height: 70vh; //	overflow-y: scroll;
+	order: 1;
+	.article {
+		padding: 10px; //		min-height: 100vh;
+		h2 {
+			//			margin-top: 30px;
+		}
+		&+.article {
+			//			margin-top: 30px;
+		}
+		.flex-1-2 {
+			width: 100%;
+		}
+		._tab ._tab_switch li {
+			max-width: 24%;
+			@include el;
+			label {
+				@include el;
+			}
+		}
+	}
+}
+
+.side {
+	border-top: 2px solid $black3;
+	padding: 0 10px 10px;
+	width: 100%;
+	height: 30vh; //	overflow-y: scroll;
+	order: 2;
+}

@@ -1,0 +1,59 @@
+.profile {
+	@include child('name') {}
+	@include child('catch') {
+//		margin-top: 15px;
+	}
+	@include child('appeal') {
+//		margin-top: 15px;
+		li {
+			line-height: 24px;
+		}
+	}
+	@include child('skill') {
+//		margin-top: 15px;
+//		border-top: 1px dashed;
+		li {
+//			position: relative;
+			line-height: 24px;
+//			border-bottom: 1px dashed;
+			&:before,
+			&:after {
+//				content: '';
+//				position: absolute;
+//				font-family: "Font Awesome 5 Free";
+//				text-align: right;
+			}
+			&:before {
+//				font-weight: bold;
+//				color: $yellow3;
+			}
+			&:after {
+//				right: 0;
+//				color: $gray2;
+			}
+			@for $i from 1 through 5 {
+				&.s#{$i} {
+					&:before {
+						width: #{16 * $i}px;
+//						$content: '';
+						@for $j from 1 through $i {
+//							$content: $content + '\f005';
+						}
+//						content: $content;
+						right: #{16 * (5 - $i)}px;
+					}
+					&:after {
+						width: #{16 * (5 - $i)}px;
+//						$content: '';
+						@if $i!=5 {
+							@for $j from 1 through (5 - $i) {
+//								$content: $content + '\f005';
+							}
+						}
+		//				content: $content;
+					}
+				}
+			}
+		}
+	}
+}

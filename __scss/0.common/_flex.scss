@@ -1,0 +1,37 @@
+// FLEX
+$margin: 10;
+@function getMargin($margin, $i) {
+	@if(100 % $i !=0) {
+		@return #{'(100% -'($margin * ($i - 1)) + .5px + ')'};
+	}
+	@elseif($margin==0) {
+		@return 100%;
+	}
+	@else {
+		@return #{'(100% -'($margin * ($i - 1)) * 1px + ')'};
+	}
+}
+
+@function getMultiply($i, $j) {
+	@return $i / $j;
+}
+
+.flex-container {
+	@include flex(between);
+	&+.flex-container {
+		margin-top: #{$margin}px;
+	}
+}
+
+@for $i from 2 through 5 {
+	@for $j from 1 through ($i - 1) {
+		.flex-#{$j}-#{$i} {
+			@if($j - 1 !=0) {
+				width: calc((#{getMargin($margin, $i)} / #{getMultiply($i,$j)}) + #{$margin * ($j - 1px)});
+			}
+			@else {
+				width: calc(#{getMargin($margin, $i)} / #{getMultiply($i,$j)});
+			}
+		}
+	}
+}

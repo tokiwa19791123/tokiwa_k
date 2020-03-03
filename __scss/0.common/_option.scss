@@ -1,0 +1,93 @@
+// OPTION
+// MAX WIDTH
+@for $i from 1 through 16 {
+	.mw-#{$i * 100} {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: #{$i * 100px};
+	}
+}
+
+// MARGIN
+@for $i from 1 through 20 {
+	.mt-#{$i * 5} {
+		margin-top: #{$i * 5px};
+	}
+}
+
+@for $i from 1 through 20 {
+	.mb-#{$i * 5} {
+		margin-bottom: #{$i * 5px};
+	}
+}
+
+// PADDING
+@for $i from 1 through 20 {
+	@for $j from 1 through 20 {
+		.p-#{$i * 5}-#{$j * 5} {
+			@if $i==$j {
+				padding: #{$i * 5px};
+			}
+			@else {
+				padding: #{$i * 5px} #{$j * 5px};
+			}
+		}
+	}
+}
+
+@for $i from 1 through 20 {
+	.pt-#{$i * 5} {
+		padding-top: #{$i * 5px};
+	}
+}
+
+@for $i from 1 through 20 {
+	.pm-#{$i * 5} {
+		padding-bottom: #{$i * 5px};
+	}
+}
+
+@for $i from 1 through 20 {
+	.pl-#{$i * 5} {
+		padding-left: #{$i * 5px};
+	}
+}
+
+@for $i from 1 through 20 {
+	.pr-#{$i * 5} {
+		padding-right: #{$i * 5px};
+	}
+}
+
+// FONT SIZE
+@for $i from 5 through 30 {
+	.fs-#{$i * 10} {
+		font-size: #{$i * 0.1rem} !important;
+		font-weight: normal;
+	}
+	.fs-#{$i * 10}b {
+		font-size: #{$i * 0.1rem} !important;
+		font-weight: bold;
+	}
+}
+
+// TEXT ALIGN
+.ta-center {
+	text-align: center !important;
+}
+
+.ta-right {
+	text-align: right !important;
+}
+
+.ta-left {
+	text-align: left !important;
+}
+
+// TEXT COLOR
+@each $color in $colors {
+	$key: index($colors, $color);
+	.c-#{$color} {
+		color: nth($colors2, $key);
+	}
+}

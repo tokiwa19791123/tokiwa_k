@@ -1,0 +1,181 @@
+// RESET(ver.2020)
+* {
+	background: inherit;
+	box-sizing: border-box;
+	&::before,
+	&::after {
+		box-sizing: border-box;
+		text-decoration: inherit;
+		vertical-align: inherit;
+	}
+}
+
+ul[class],
+ol[class] {
+	padding: 0;
+	list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+html {
+	box-sizing: border-box;
+	word-break: break-word;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.6;
+}
+
+a {
+	background-color: transparent;
+	text-decoration-skip-ink: auto;
+	text-decoration: none;
+	transition: 0.3s;
+	&:active,
+	&:hover {
+		outline-width: 0;
+	}
+	&>* {
+		transition: 0.3s;
+	}
+}
+
+hr {
+	border: none;
+	margin: 10px 0;
+	border-top: 1px solid;
+	height: 0;
+	overflow: visible;
+}
+
+details,
+main {
+	display: block;
+}
+
+sub,
+sup {
+	font-size: 0.75em;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+	vertical-align: bottom;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 100%;
+	word-break: break-all;
+	word-wrap: break-all;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	tr {
+		border-bottom: 1px solid;
+		th,
+		td {
+			border-right: 1px solid;
+		}
+	}
+}
+
+address {
+	font-style: normal;
+}
+
+fieldset {
+	border: none;
+}
+
+legend {
+	border: 0;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0 0.5em;
+	white-space: normal;
+}
+
+input,
+button,
+textarea,
+select {
+	border: none;
+	border: 1px solid;
+	border-radius: 0;
+	font: inherit;
+}
+
+[type="text"],
+[type="number"],
+[type="tel"],
+[type="mail"],
+[type="email"],
+[type="url"],
+[type="password"],
+[type="date"],
+[type="time"],
+[type="search"],
+[type="range"] {
+	width: 100%;
+}
+
+textarea {
+	overflow: auto;
+	resize: vertical;
+	width: 100%;
+}
+
+label {
+	cursor: pointer;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+	cursor: pointer;
+	overflow: visible;
+}
+
+[hidden] {
+	display: none !important;
+}

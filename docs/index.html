@@ -2,38 +2,36 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="format-detection" content="telephone=no,address=no,email=no">
-<meta name="author" content="トキワK">
-<link rel="stylesheet" href="./public/fontawesome/css/all.min.css">
-<link rel="stylesheet" href="./public/css/style.css">
-<link rel="stylesheet" href="./public/css/sample.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="./public/js/peraichi.js"></script>
-
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="">
+<link rel="icon" type="image/x-icon" href="/public/img/icon/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous">
+<link rel="stylesheet" href="./public/css/reset.css" type="text/css">
+<link rel="stylesheet" href="./public/css/option.css" type="text/css">
+<link rel="stylesheet" href="./public/css/style.css" type="text/css">
+<link rel="stylesheet" href="./public/css/sample.css" type="text/css">
 <title>トキワK ポートフォリオ</title>
 </head>
 <body>
-<div class="wrapper peraichi-wrapper">
+<div class="wrapper">
+<main class="main">
+<article class="article profile" id="profile">
+	<h1 class="profile-name">トキワK</h1>
+	<h2 class="profile-catch">CSS大好きコーダー</h2>
 
-<header class="peraichi-box">
-	<h1 class="peraichi-subject">トキワK ポートフォリオ</h1>
-
-	<img src="./public/images/profile2.png" class="profile-image" alt="profile-image">
-
-	<h2>CSS大好きコーダー</h2>
-
-	<ul class="profile">
+	<ul class="profile-appeal">
 		<li><i class="fab fa-html5"></i> html / <i class="fab fa-css3-alt"></i> css大得意。<span class="tooltip" data-tooltip="このホバーアニメーションもcssだけです。"><span class="anime-rainbow">簡単なアニメーション</span></span>程度ならcss。</li>
 		<li>cssが好きすぎて、アイコンは基本 <i class="fab fa-fort-awesome"></i> <b>Font Awesome</b>。</li>
 		<li><i class="fas fa-arrows-alt-h"></i> レスポンシブデザイン、<i class="far fa-file-code"></i> ランディングページ、<i class="fab fa-wordpress"></i> WordPress案件の経験あり。</li>
 		<li><i class="fab fa-wordpress"></i> WordPressはテーマ制作・運営のほか、ウィジェット制作の経験もあり。</li>
 		<li><i class="fab fa-js"></i> jQuery(java script)も得意。</li>
-		<li>このポートフォリオではナビメニューの生成にのみjQueryを使用。</li>
 		<li><i class="fas fa-images"></i> 画像加工もできます。</li>
 	</ul>
 
-	<ul class="skill-status">
+	<ul class="profile-skill">
 		<li class="s5"><i class="fab fa-html5"></i> html / <i class="fab fa-css3-alt"></i> css</li>
 		<li class="s5"><i class="fab fa-js"></i> jQuery(java script)</li>
 		<li class="s4"><i class="fab fa-wordpress"></i> WordPress</li>
@@ -42,14 +40,11 @@
 		<li class="s5"><i class="fab fa-adobe"></i> Illustrator</li>
 		<li class="s2"><i class="far fa-grin-beam-sweat"></i> communication</li>
 	</ul>
-
-	<div class="appeal-wrapper"><div class="appeal-roll"><span class="appeal-color"><i class="fas fa-long-arrow-alt-down"></i><i class="fas fa-long-arrow-alt-down"></i><i class="fas fa-long-arrow-alt-down"></i> できることアピール <i class="fas fa-long-arrow-alt-down"></i><i class="fas fa-long-arrow-alt-down"></i><i class="fas fa-long-arrow-alt-down"></i></span></div></div>
-</header>
+</article>
 
 
-
-<article class="peraichi-box">
-	<h1 class="peraichi-subject">リンク効果 アニメーション</h1>
+<article class="article" id="link-effect">
+	<h1 class="article-title">リンク効果 アニメーション</h1>
 
 	<h2>カラーアニメーション</h2>
 	<a href="##" class="_link_blue _link_hover_red">青から赤</a>
@@ -63,7 +58,7 @@
 	<a href="##" class="_link_blue _link_hover_black">青から黒</a>
 	<a href="##" class="_link_blue _link_hover_white">青から白</a>
 
-	<hr>
+
 
 	<a href="##" class="_link_red _link_hover_blue">赤から青</a>
 	<a href="##" class="_link_orange _link_hover_blue">オレンジから青</a>
@@ -76,7 +71,7 @@
 	<a href="##" class="_link_black _link_hover_blue">黒から青</a>
 	<a href="##" class="_link_white _link_hover_blue">白から青</a>
 
-	<hr>
+
 
 	<h2>マーカーアニメーション</h2>
 	<a href="##" class="_link_maker_red">赤マーカー</a>
@@ -91,7 +86,7 @@
 	<a href="##" class="_link_maker_black">黒マーカー</a>
 	<a href="##" class="_link_white _link_maker_white">白マーカー</a>
 
-	<hr>
+
 
 	<h2>ラインアニメーション</h2>
 	<a href="##" class="_link_line_left">左から右</a>
@@ -100,8 +95,9 @@
 	<a href="##" class="_link_line_wide">左右から中央</a>
 </article>
 
-<article class="peraichi-box">
-	<h1 class="peraichi-subject">リンク効果 ボタン</h1>
+
+<article class="article" id="link-button">
+	<h1 class="article-title">リンク効果 ボタン</h1>
 
 	<h2>フラットボタン</h2>
 	<a href="##" class="_button_flat_red">赤いボタン</a>
@@ -116,7 +112,7 @@
 	<a href="##" class="_button_flat_black">黒いボタン</a>
 	<a href="##" class="_button_flat_white">白いボタン</a>
 
-	<hr>
+
 
 	<h2>フラット立体ボタン</h2>
 	<a href="##" class="_button_push_red">赤いボタン</a>
@@ -131,7 +127,7 @@
 	<a href="##" class="_button_push_black">黒いボタン</a>
 	<a href="##" class="_button_push_white">白いボタン</a>
 
-	<hr>
+
 
 	<h2>ゴーストボタン</h2>
 	<a href="##" class="_button_ghost_red">赤いボタン</a>
@@ -146,7 +142,7 @@
 	<a href="##" class="_button_ghost_black">黒いボタン</a>
 	<a href="##" class="_button_ghost_white">白いボタン</a>
 
-	<hr>
+
 
 	<h2>リアルなボタン</h2>
 	<a href="##" class="_button_real_red">赤いボタン</a>
@@ -162,42 +158,42 @@
 	<a href="##" class="_button_real_white">白いボタン</a>
 </article>
 
-<article class="peraichi-box">
-	<h1 class="peraichi-subject">画像エフェクト マウスホバー</h1>
+<article class="article" id="image-effect">
+	<h1 class="article-title">画像エフェクト マウスホバー</h1>
 
-	<div class="flex-wrapper">
-		<div class="flex-child">
+	<div class="flex-container">
+		<div class="flex-1-2">
 			<h2>ズームイン</h2>
 			<div class="_image_zoom_in"><img src="http://placekitten.com/480/480" alt="猫480x480"></div>
 		</div>
-		<div class="flex-child">
+		<div class="flex-1-2">
 			<h2>ズームアウト</h2>
 			<div class="_image_zoom_out"><img src="http://placekitten.com/480/480" alt="猫480x480"></div>
 		</div>
 	</div>
 
-	<hr>
 
-	<div class="flex-wrapper">
-		<div class="flex-child">
+
+	<div class="flex-container">
+		<div class="flex-1-2">
 			<h2>右回転</h2>
 			<div class="_image_rolling_right"><img src="http://placekitten.com/480/480" alt="猫480x480"></div>
 		</div>
-		<div class="flex-child">
+		<div class="flex-1-2">
 			<h2>左回転</h2>
 			<div class="_image_rolling_left"><img src="http://placekitten.com/480/480" alt="猫480x480"></div>
 		</div>
-		<div class="flex-child">
+		<div class="flex-1-2">
 			<h2>縦回転</h2>
 			<div class="_image_rolling_x"><img src="http://placekitten.com/480/480" alt="猫480x480"></div>
 		</div>
-		<div class="flex-child">
+		<div class="flex-1-2">
 			<h2>横回転</h2>
 			<div class="_image_rolling_y"><img src="http://placekitten.com/480/480" alt="猫480x480"></div>
 		</div>
 	</div>
 
-	<hr>
+
 
 	<h2>別画像に</h2>
 	<div class="_image_change">
@@ -206,8 +202,8 @@
 	</div>
 </article>
 
-<article class="peraichi-box">
-	<h1 class="peraichi-subject">ラジオボタン効果</h1>
+<article class="article" id="radio-button">
+	<h1 class="article-title">ラジオボタン効果</h1>
 
 	<h2>選択したら色をつける</h2>
 	<div class="_radio_color">
@@ -224,7 +220,7 @@
 		<label><input type="radio" name="demo1" value="11"><span class="_radio_color_white">白</span></label>
 	</div>
 
-	<hr>
+
 
 	<h2>ボタン風デザイン</h2>
 	<div class="_radio_button">
@@ -241,7 +237,7 @@
 		<label><input type="radio" name="demo2" value="11"><span class="_radio_button_white">白</span></label>
 	</div>
 
-	<hr>
+
 
 	<h2>チェッカーが動く</h2>
 	<div class="_radio_move">
@@ -258,7 +254,7 @@
 		<div class="_radio_move_checker"></div>
 	</div>
 
-	<hr>
+
 
 	<h2>チェッカーがピョコっと出てくる</h2>
 	<div class="_radio_pickup">
@@ -270,52 +266,9 @@
 	</div>
 </article>
 
-<article class="peraichi-box">
-	<h1 class="peraichi-subject">背景効果 グラデーション</h1>
 
-	<h2>単色（色 → 透明）</h2>
-	<div class="_bg_grd _bg_start_red">赤から透明</div>
-	<div class="_bg_grd _bg_start_orange">オレンジから透明</div>
-	<div class="_bg_grd _bg_start_yellow">黄色から透明</div>
-	<div class="_bg_grd _bg_start_lime">黄緑から透明</div>
-	<div class="_bg_grd _bg_start_green">緑から透明</div>
-	<div class="_bg_grd _bg_start_blue">青から透明</div>
-	<div class="_bg_grd _bg_start_purple">紫から透明</div>
-	<div class="_bg_grd _bg_start_pink">ピンクから透明</div>
-	<div class="_bg_grd _bg_start_gray">灰色から透明</div>
-	<div class="_bg_grd _bg_start_black">黒から透明</div>
-	<div class="_bg_grd _bg_start_white">白から透明</div>
-
-	<hr>
-
-	<h2>単色（透明 → 色）</h2>
-	<div class="_bg_grd _bg_end_red">透明から赤</div>
-	<div class="_bg_grd _bg_end_orange">透明からオレンジ</div>
-	<div class="_bg_grd _bg_end_yellow">透明から黄色</div>
-	<div class="_bg_grd _bg_end_lime">透明から黄緑</div>
-	<div class="_bg_grd _bg_end_green">透明から緑</div>
-	<div class="_bg_grd _bg_end_blue">透明から青</div>
-	<div class="_bg_grd _bg_end_purple">透明から紫</div>
-	<div class="_bg_grd _bg_end_pink">透明からピンク</div>
-	<div class="_bg_grd _bg_end_gray">透明から灰色</div>
-	<div class="_bg_grd _bg_end_black">透明から黒</div>
-	<div class="_bg_grd _bg_end_white">透明から白</div>
-
-	<hr>
-
-	<h2>混色（色 ↔ 色）</h2>
-	<div class="_bg_grd _bg_start_red _bg_end_blue">赤から青</div>
-	<div class="_bg_grd _bg_start_orange _bg_end_pink">オレンジからピンク</div>
-	<div class="_bg_grd _bg_start_yellow _bg_end_blue">黄色から青</div>
-	<div class="_bg_grd _bg_start_lime _bg_end_green">黄緑から緑</div>
-	<div class="_bg_grd _bg_start_green _bg_end_orange">緑からオレンジ</div>
-	<div class="_bg_grd _bg_start_blue _bg_end_kime">青から黄緑</div>
-	<div class="_bg_grd _bg_start_purple _bg_end_pink">紫からピンク</div>
-	<div class="_bg_grd _bg_start_pink _bg_end_red">ピンクから赤</div>
-</article>
-
-<article class="peraichi-box">
-	<h1 class="peraichi-subject">html / CSSだけで動きのある効果</h1>
+<article class="article" id="move-effect">
+	<h1 class="article-title">html / CSSだけで動きのある効果</h1>
 
 	<h2>html / CSSだけでアコーディオン</h2>
 	<details class="_accordion">
@@ -346,7 +299,7 @@
 		</div>
 	</details>
 
-	<hr>
+
 
 	<h2>html/cssだけでタブメニュー</h2>
 	<div class="_tab">
@@ -375,7 +328,7 @@
 		</div>
 	</div>
 
-	<hr>
+
 
 	<h2>html/cssだけでモーダルウィンドウ</h2>
 	<div class="_modal">
@@ -390,11 +343,11 @@
 	</div>
 </article>
 
-<article class="peraichi-box">
-	<h1 class="peraichi-subject">html / cssだけでスライドショー</h1>
+<article class="article">
+	<h1 class="article-title">html / cssだけでスライドショー</h1>
 
-	<div class="flex-wrapper">
-		<div class="flex-child">
+	<div class="flex-container">
+		<div class="flex-1-2">
 			<h2>スライドタイプ</h2>
 			<div class="_slideshow_type_slide">
 				<ul class="_slideshow_inner">
@@ -405,7 +358,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="flex-child">
+		<div class="flex-1-2">
 			<h2>フェードタイプ</h2>
 			<div class="_slideshow_type_fade">
 				<ul class="_slideshow_inner">
@@ -419,21 +372,41 @@
 	</div>
 </article>
 
-<footer class="peraichi-box">
 
+</main>
+<aside class="side">
+	<h1 class="side-title">トキワK ポートフォリオ</h1>
 
+	<div class="side-grid">
+		<div class="side-grid-item">
+			<a href="#profile" class="side-grid-item-image"><img src="./public/images/profile2.png" class="profile-image" alt="profile"></a>
+			<a href="#profile" class="side-grid-item-link">profile</a>
+		</div>
 
+		<div class="side-grid-item">
+			<a href="#link-effect" class="side-grid-item-link">リンク効果 アニメーション</a>
+		</div>
 
+		<div class="side-grid-item">
+			<a href="#link-button" class="side-grid-item-link">リンク効果 ボタン</a>
+		</div>
 
+		<div class="side-grid-item">
+			<a href="#image-effect" class="side-grid-item-link">画像エフェクト マウスホバー</a>
+		</div>
 
+		<div class="side-grid-item">
+			<a href="#radio-button" class="side-grid-item-link">ラジオボタン効果</a>
+		</div>
 
-
-	<p>&copy; footer</p>
-</footer>
-
-<button class="navigation-switch" tabindex="1" accesskey="M"><span class="switch" id="switch"><span class="switch_1"></span><span class="switch_2"></span><span class="switch_3"></span></span></button>
-<nav class="navigation" id="navigation"></nav>
-<ul class="indicator" id="indicator"></ul>
+		<div class="side-grid-item">
+			<a href="#move-effect" class="side-grid-item-link">html / CSSだけで動きのある効果</a>
+		</div>
+	</div>
+</aside>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="./public/js/script.js"></script>
 </body>
 </html>
